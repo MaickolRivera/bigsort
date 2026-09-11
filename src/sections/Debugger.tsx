@@ -3,6 +3,8 @@ import Sidebar from "../components/Sidebar";
 import SidebarSection from "../components/SidebarSection";
 import IconDebugger from "../components/icons/general/IconDebugger";
 import IconGithub from "../components/icons/general/IconGithub";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
 
 type SidebarCodeProps = {
@@ -21,26 +23,35 @@ function SidebarCode({ codeLanguage, codeAlgorithm, message}: SidebarCodeProps) 
                 </SidebarSection>
 
                 <SidebarSection title="STEP BY STEP">
-                <div className="bg-WM-active dark:bg-BM-active rounded-lg border-1 border-WM-border dark:border-BM-border">
-                    <p className="text-WM-subtext dark:text-BM-subtext text-xs mx-3 my-2.5">{(!message?.title) ? `${codeAlgorithm} SORT | READY TO START` : `${message?.title}`} </p>
-                    <div className="bg-WM-sidebar dark:bg-BM-sidebar px-3 py-3 text-xs rounded-lg">
-                        <p className="text-WM-text dark:text-BM-text">{(!message?.description) ? "Press the run buttom to begin sorting." : `${message?.description}`}</p>
-                    </div>
-                </div>
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="text-xs font-normal text-muted-foreground">
+                            {!message?.title ? `${codeAlgorithm} SORT | READY TO START` : message.title}
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <p className="text-xs">
+                            {!message?.description ? "Press the run buttom to begin sorting." : message.description}
+                            </p>
+                        </CardContent>
+                    </Card>
                 </SidebarSection>
-
             </div>
 
             <SidebarSection title="GITHUB">
-                <a
-                    href="https://github.com/m4icol/bigsort"
-                    target="_blank"
-                    className="flex flex-row px-5 py-2.5 rounded-lg border-1 items-center custom-bg text-WM-subtext hover:text-WM-text hover:border-WM-subtext 
-                    dark:text-BM-subtext dark:hover:text-BM-text dark:hover:border-BM-subtext justify-between"
-                >
-                    <p className="text-sm">VIEW REPOSITORY</p>
-                    <IconGithub />
-                </a>
+                <Button
+                    asChild
+                    variant="outline"
+                    className="w-full justify-between px-5 py-2.5">
+                    <a    
+                        href="https://github.com/m4icol/bigsort"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span className="text-sm">VIEW REPOSITORY</span>
+                        <IconGithub />
+                    </a>
+                    </Button>
             </SidebarSection>
         </Sidebar>
     );

@@ -1,5 +1,7 @@
 import { snippets } from "../snippets/debugger";
 import type { LanguageKey } from "../types";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
 type AlgorithmKey = keyof typeof snippets;
 type CodeFieldProps = {
@@ -12,13 +14,20 @@ export default function CodeField({ codeAlgorithm, codeLanguage }: CodeFieldProp
   const code = snippets[codeAlgorithm][langKey]?.code ?? "// Code not available.";
 
   return (
-    <div className="rounded-lg border-1 border-WM-border dark:border-BM-border  bg-WM-active dark:bg-BM-active ">
-      <p className=" text-WM-subtext dark:text-BM-subtext text-xs mx-3 my-2.5">{codeLanguage.toUpperCase()}</p>
-      <div className=" bg-WM-sidebar dark:bg-BM-sidebar px-3 py-2 rounded-lg">
-        <pre className=" text-WM-subtext dark:text-BM-subtext overflow-x-scroll scroll-bar-code pb-2 text-xs">
-          {code}
-        </pre>
-      </div>
-    </div>
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-xs font-normal text-muted-foreground uppercase">
+          {codeLanguage.toUpperCase()}
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <ScrollArea type="always" className="w-full whitespace-nowrap">
+  <pre className="text-sm pb-5">
+    <code>{code}</code>
+  </pre>
+  <ScrollBar orientation="horizontal"/>
+</ScrollArea>
+      </CardContent>
+    </Card>
   );
 }

@@ -26,6 +26,7 @@ export default function SwitchOption<T extends string>({
     <ToggleGroup
       type="single"
       value={selectedValue}
+      variant="outline"
       onValueChange={handleValueChange}
       className="w-full"
     >
