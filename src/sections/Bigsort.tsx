@@ -7,8 +7,8 @@ import { inCurrentlyAnimating, playSteps, stopAnimation } from "../snippets/anim
 import { getInsertionSortSteps } from "../snippets/animation/insertionSteps";
 import { getSelectionSortSteps } from "../snippets/animation/selectionSteps";
 import { getQuickSortSteps } from "../snippets/animation/quickSteps";
-import Stats from "./sub_sections/Stats";
-import Controls from "./sub_sections/Controls";
+import Stats from "./Stats";
+import Controls from "./Controls";
 
 type BigSortProps = {
   randomNumberItems: number;

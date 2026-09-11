@@ -1,8 +1,8 @@
-import IconPause from "../../components/icons/controls/IconPause"
-import IconRetry from "../../components/icons/controls/IconRetry"
-import IconRun from "../../components/icons/controls/IconRun"
-import PanelItem from "../../components/Item"
-import SortingList from "../../components/SortingList"
+import IconPause from "../components/icons/controls/IconPause"
+import IconRetry from "../components/icons/controls/IconRetry"
+import IconRun from "../components/icons/controls/IconRun"
+import PanelItem from "../components/Item"
+import SortingList from "../components/SortingList"
 
 type ControlsProps = {
     currentList: number[];

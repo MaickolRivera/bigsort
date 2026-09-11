@@ -13,13 +13,7 @@ type SidebarCodeProps = {
 
 function SidebarCode({ codeLanguage, codeAlgorithm, message}: SidebarCodeProps) {
     return (
-        <Sidebar
-            title="DEBUGGER"
-            icon={IconDebugger}
-            sizeSidebar="w-screen lg:w-80"
-            position="right-0 lg:right-5"
-            rounded="rounded-bl-2xl lg:rounded-2xl"
-        >   
+        <Sidebar title="DEBUGGER" icon={IconDebugger} side="right"> 
             <div className="flex flex-col gap-6 mb-5">
 
                 <SidebarSection title="CODE">

@@ -1,22 +1,29 @@
 import { useState } from "react";
 
+type Side = "left" | "right";
+
 type SidebarProps = {
   title: string;
-  sizeSidebar?: string;
-  position: string;
-  rounded?: string;
+  side: Side;
   icon: React.FC<React.SVGProps<SVGSVGElement>>;
   children?: React.ReactNode;
 };
 
-export default function Sidebar({
-  title,
-  icon: Icon,
-  children,
-  sizeSidebar = "w-screen lg:w-80",
-  position,
-  rounded = "rounded-2xl",
-}: SidebarProps) {
+const sideConfig: Record<Side, { sizeSidebar: string; position: string; rounded: string }> = {
+  left: {
+    sizeSidebar: "w-screen lg:w-80 z-20",
+    position: "left-0 lg:left-5",
+    rounded: "rounded-br-2xl lg:rounded-2xl",
+  },
+  right: {
+    sizeSidebar: "w-screen lg:w-80",
+    position: "right-0 lg:right-5",
+    rounded: "rounded-bl-2xl lg:rounded-2xl",
+  },
+};
+
+export default function Sidebar({ title, icon: Icon, children, side }: SidebarProps) {
+  const { sizeSidebar, position, rounded } = sideConfig[side];
   const [isOpen, setIsOpen] = useState(() => window.innerWidth >= 1024);
 
   const toggleSidebar = () => setIsOpen(!isOpen);

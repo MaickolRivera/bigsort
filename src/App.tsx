@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import BigSort from "./sections/Bigsort";
-import SidebarCode from "./sections/SidebarDebugger";
-import SidebarSettings from "./sections/SidebarSettings";
+import SidebarCode from "./sections/Debugger";
+import SidebarSettings from "./sections/Settings";
 import type { AlgorithmKey, LanguageKey, MessageKey, OrderKey, SpeedKey } from "./types";
 function App() {
   const [rangeValue, setRangeValue] = useState(10);
