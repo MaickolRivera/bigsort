@@ -74,13 +74,12 @@ function SidebarSettings({
                     />
                 </SidebarSection>
 
-                <div className="flex flex-col gap-2">
-                    <p className="font-semibold text-sm">NUMBERS <span className="text-xs text-WM-subtext dark:text-BM-subtext">{rangeValue}</span></p>
-                    <div className="flex items-center gap-2">
+                <SidebarSection title="NUMBERS">
+                    <div className="flex flex-row w-full gap-2">
                         <ButtonRandom onClick={randomNumberItems} />
                         <Range value={rangeValue} onChange={setRangeValue} />
                     </div>
-                </div>
+                </SidebarSection>
 
                 <SidebarSection title="SPEED">
                     <SwitchOption<SpeedKey>

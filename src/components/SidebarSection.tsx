@@ -1,14 +1,16 @@
+import { cn } from "@/lib/utils";
+
 type SidebarSectionProps = {
-    title: string;
-    children: React.ReactNode;
-  };
-  
-  export default function SidebarSection({ title, children }: SidebarSectionProps) {
-    return (
-      <div className="flex flex-col gap-2">
-        <label className="font-semibold text-xs">{title}</label>
-        {children}
-      </div>
-    );
-  }
-  
+  title: string;
+  className?: string;
+  children: React.ReactNode;
+};
+
+export default function SidebarSection({ title, className, children }: SidebarSectionProps) {
+  return (
+    <div className={cn("flex flex-col gap-2", className)}>
+      <label className="font-semibold text-xs text-muted-foreground">{title}</label>
+      {children}
+    </div>
+  );
+}
