@@ -6,7 +6,7 @@ type SidebarSectionProps = {
   export default function SidebarSection({ title, children }: SidebarSectionProps) {
     return (
       <div className="flex flex-col gap-2">
-        <p className="font-semibold text-sm">{title}</p>
+        <label className="font-semibold text-xs">{title}</label>
         {children}
       </div>
     );

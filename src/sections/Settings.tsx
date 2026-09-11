@@ -68,7 +68,6 @@ function SidebarSettings({
 
                 <SidebarSection title="ALGORITHMS">
                     <Dropdown<AlgorithmKey>
-                        dropdownPositionClass="mt-2 top-full"
                         values={['BUBBLE', 'INSERTION', 'SELECTION', 'QUICK']}
                         selectedValue={codeAlgorithm}
                         setSelectedValue={setCodeAlgorithm}
@@ -124,7 +123,6 @@ function SidebarSettings({
 
                 <SidebarSection title="LANGUAGE">
                     <Dropdown<string>
-                        dropdownPositionClass="mb-2 bottom-full"
                         values={["ENGLISH", "SPANISH"]}
                         selectedValue={selectedLanguage}
                         setSelectedValue={setSelectedLanguage}
