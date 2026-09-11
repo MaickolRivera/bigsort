@@ -1,9 +1,9 @@
-type SunIconProps = {
+type IconWhiteModeProps = {
     size?: number;
     className?: string;
 }
 
-export default function SunIcon({size = 16, className=""}: SunIconProps){
+export default function IconWhiteMode({size = 16, className=""}: IconWhiteModeProps){
     return(
         <svg 
         width={size} 

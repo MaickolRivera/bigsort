@@ -1,9 +1,9 @@
-type IconMoonProps={
+type IconDarkModeProps={
     size?: number;
     className?: string;
 }
 
-export default function IconMoon({size = 15, className=""}:IconMoonProps){
+export default function IconDarkMode({size = 15, className=""}:IconDarkModeProps){
     return(
         <svg 
             width={size}

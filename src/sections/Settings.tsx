@@ -10,8 +10,8 @@ import { useState } from "react";
 import IconJS from "../components/icons/languajes/IconJS";
 import IconJava from "../components/icons/languajes/IconJava";
 import IconPython from "../components/icons/languajes/IconPython";
-import SunIcon from "../components/icons/general/IconSun";
-import MoonIcon from "../components/icons/general/IconMoon";
+import SunIcon from "../components/icons/config/IconWhiteMode";
+import MoonIcon from "../components/icons/config/IconDarkMode";
 
 type SidebarSettingsProps = {
     rangeValue: number;
