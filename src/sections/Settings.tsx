@@ -13,7 +13,7 @@ import IconPython from "../components/icons/languajes/IconPython";
 import SunIcon from "../components/icons/config/IconWhiteMode";
 import MoonIcon from "../components/icons/config/IconDarkMode";
 
-type SidebarSettingsProps = {
+type SettingSidebarProps = {
     rangeValue: number;
     setRangeValue: (value: number) => void;
     randomNumberItems: () => void;
@@ -34,7 +34,7 @@ type SidebarSettingsProps = {
     handleThemeChange: (value: string) => void;
 };
 
-function SidebarSettings({
+function SettingSidebar({
     rangeValue,
     setRangeValue,
     randomNumberItems,
@@ -53,7 +53,7 @@ function SidebarSettings({
 
     theme,
     handleThemeChange,
-  }: SidebarSettingsProps) {
+  }: SettingSidebarProps) {
 
     const [selectedLanguage, setSelectedLanguage] = useState("ENGLISH");
 
@@ -132,4 +132,4 @@ function SidebarSettings({
         </Sidebar>
     )
 }
-export default SidebarSettings;
+export default SettingSidebar;

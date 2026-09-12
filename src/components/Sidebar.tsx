@@ -12,12 +12,12 @@ type SidebarProps = {
 const sideConfig: Record<Side, { sizeSidebar: string; position: string; rounded: string }> = {
   left: {
     sizeSidebar: "w-screen lg:w-80 z-20",
-    position: "left-0 lg:left-5",
+    position: "left-0 lg:left-2",
     rounded: "rounded-br-2xl lg:rounded-2xl",
   },
   right: {
     sizeSidebar: "w-screen lg:w-80",
-    position: "right-0 lg:right-5",
+    position: "right-0 lg:right-2",
     rounded: "rounded-bl-2xl lg:rounded-2xl",
   },
 };
@@ -31,10 +31,11 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
   return (
     <aside
       className={`
-        fixed ${position} ${rounded} top-0 bottom-0 lg:top-5 lg:bottom-5 z-10 border-1 border-BM-border/20
-        flex flex-col px-7 lg:px-6.5 py-5.5 bg-WM-sidebar dark:bg-BM-sidebar transition-all duration-300
-        ${isOpen 
-          ? `${sizeSidebar} overflow-y-scroll scroll-bar-custom` 
+        fixed ${position} ${rounded} top-0 bottom-0 lg:top-2 lg:bottom-5 z-10
+        border border-sidebar-border
+        flex flex-col px-7 lg:px-5 py-5 bg-sidebar text-sidebar-foreground transition-all duration-300
+        ${isOpen
+          ? `${sizeSidebar} overflow-y-scroll scroll-bar-custom`
           : "w-19 lg:h-auto h-19 justify-start items-start"
         }
       `}
@@ -49,7 +50,7 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
         <Icon className="flex-shrink-0" />
         <h2
           className={`
-            text-WM-text dark:text-BM-text font-bold text-xl transition-all duration-300 overflow-hidden
+            font-bold text-xl transition-all duration-300 overflow-hidden
             ${isOpen ? "opacity-100 w-auto" : "opacity-0 w-0"}
           `}
         >

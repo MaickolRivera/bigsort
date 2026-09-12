@@ -36,7 +36,7 @@ function App() {
 
 
   return (
-    <div className="flex overflow-y-scroll scroll-bar-custom flex-row justify-between bg-WM-background dark:bg-BM-background h-screen w-screen text-WM-text dark:text-BM-text font-display">
+    <div className="flex overflow-y-scroll scroll-bar-custom flex-row justify-between h-screen w-screen font-display">
       <SidebarSettings         
         rangeValue={rangeValue}
         setRangeValue={setRangeValue}

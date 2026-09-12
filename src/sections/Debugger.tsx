@@ -7,13 +7,13 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
 
-type SidebarCodeProps = {
+type DebuggerSidebarProps = {
   codeLanguage: LanguageKey,
   codeAlgorithm: AlgorithmKey;
   message: MessageKey | null;
 }
 
-function SidebarCode({ codeLanguage, codeAlgorithm, message}: SidebarCodeProps) {
+function DebuggerSidebar({ codeLanguage, codeAlgorithm, message}: DebuggerSidebarProps) {
     return (
         <Sidebar title="DEBUGGER" icon={IconDebugger} side="right"> 
             <div className="flex flex-col gap-6 mb-5">
@@ -57,4 +57,4 @@ function SidebarCode({ codeLanguage, codeAlgorithm, message}: SidebarCodeProps) 
     );
 }
 
-export default SidebarCode;
+export default DebuggerSidebar;
