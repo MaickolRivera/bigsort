@@ -5,29 +5,34 @@ import Range from "../components/Range";
 import SwitchOption from "../components/SwitchOption";
 import SidebarSection from "../components/SidebarSection";
 import ButtonRandom from "../components/ButtonRandom";
-import type { AlgorithmKey, LanguageKey, OrderKey, SpeedKey } from "../types";
+import type { AlgorithmKey, OrderKey, SpeedKey } from "../types";
 import { useState } from "react";
 import SunIcon from "../components/icons/config/IconWhiteMode";
 import MoonIcon from "../components/icons/config/IconDarkMode";
 import { Button } from "@/components/ui/button";
 import IconGithub from "@/components/icons/general/IconGithub";
+import SortingList from "@/components/SortingList";
 
 type SettingSidebarProps = {
-    rangeValue: number;
-    setRangeValue: (value: number) => void;
-    randomNumberItems: () => void;
 
     codeAlgorithm: AlgorithmKey;
     setCodeAlgorithm: (value: AlgorithmKey) => void;
 
-    algSpeed: SpeedKey;
-    setAlgSpeed: (value: SpeedKey) => void;
-
     algOrder: OrderKey;
     setAlgOrder: (value: OrderKey) => void;
 
+    algSpeed: SpeedKey;
+    setAlgSpeed: (value: SpeedKey) => void;
+
+    rangeValue: number;
+    setRangeValue: (value: number) => void;
+    randomNumberItems: () => void;
+
     theme: string;
     handleThemeChange: (value: string) => void;
+
+    currentList: number[];
+    handleCreateList: () => void;
 };
 
 function SettingSidebar({
@@ -46,6 +51,9 @@ function SettingSidebar({
 
     theme,
     handleThemeChange,
+
+    currentList,
+    handleCreateList,
   }: SettingSidebarProps) {
 
     const [selectedLanguage, setSelectedLanguage] = useState<"EN" | "ES">("EN");
@@ -70,11 +78,13 @@ function SettingSidebar({
                     />
                 </SidebarSection>
 
-                <SidebarSection title="NUMBERS">
-                    <div className="flex flex-row w-full gap-2">
-                        <ButtonRandom onClick={randomNumberItems} />
-                        <Range value={rangeValue} onChange={setRangeValue} />
-                    </div>
+                <SidebarSection title="ORDER">
+                    <SwitchOption<OrderKey>
+                        selectedValue={algOrder}
+                        setSelectedValue={setAlgOrder}
+                        options={["ASCENDING", "DESCENDING"]}
+                        values={["ASCENDING", "DESCENDING"]}
+                    />
                 </SidebarSection>
 
                 <SidebarSection title="SPEED">
@@ -86,13 +96,15 @@ function SettingSidebar({
                     />
                 </SidebarSection>
 
-                <SidebarSection title="ORDER">
-                    <SwitchOption<OrderKey>
-                        selectedValue={algOrder}
-                        setSelectedValue={setAlgOrder}
-                        options={["ASCENDING", "DESCENDING"]}
-                        values={["ASCENDING", "DESCENDING"]}
-                    />
+                <SidebarSection title="NUMBERS">
+                    <div className="flex flex-row w-full gap-2">
+                        <ButtonRandom onClick={randomNumberItems} />
+                        <Range value={rangeValue} onChange={setRangeValue} />
+                    </div>
+                </SidebarSection>
+
+                <SidebarSection title="VALUES">
+                    <SortingList currentList={currentList} handleCreateList={handleCreateList} />
                 </SidebarSection>
             </div>
 
@@ -120,11 +132,7 @@ function SettingSidebar({
                             variant="outline"
                             className="flex-1"
                         >
-                            <a
-                                href="https://github.com/maickolrivera/bigsort"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
+                            <a href="https://github.com/maickolrivera/bigsort" target="_blank" rel="noopener noreferrer">
                                 <IconGithub />
                             </a>
                         </Button>
