@@ -97,7 +97,7 @@ function SettingSidebar({
                 </SidebarSection>
 
                 <SidebarSection title="NUMBERS">
-                    <div className="flex flex-row w-full gap-2">
+                    <div className="flex flex-row items-stretch gap-2">
                         <ButtonRandom onClick={randomNumberItems} />
                         <Range value={rangeValue} onChange={setRangeValue} />
                     </div>

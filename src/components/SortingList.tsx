@@ -12,7 +12,7 @@ export default function SortingList({ handleCreateList, currentList }: SortingLi
         <div className="flex flex-row items-stretch gap-2">
             <ButtonRandom
                 onClick={handleCreateList}
-                className="h-full shrink-0 bg-sidebar border-sidebar-border text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+                className="h-full"
             />
 
             <PanelItem
