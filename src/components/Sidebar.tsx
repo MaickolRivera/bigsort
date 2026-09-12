@@ -31,19 +31,24 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
   return (
     <aside
       className={`
-        fixed ${position} ${rounded} top-0 bottom-0 lg:top-2 lg:bottom-5 z-10
-        border border-sidebar-border
-        flex flex-col px-7 lg:px-5 py-5 bg-sidebar text-sidebar-foreground transition-all duration-300
+        ${position} ${rounded}
+        border border-sidebar-border bg-sidebar text-sidebar-foreground transition-all duration-300
+        flex flex-col fixed z-10 
+        
+        top-0 bottom-0 
+        px-7 py-5 pb-1
+        lg:top-2 lg:bottom-5 
+        lg:px-5 
         ${isOpen
           ? `${sizeSidebar} overflow-y-scroll scroll-bar-custom`
-          : "w-19 lg:h-auto h-19 justify-start items-start"
+          : "w-16.5 h-19 lg:h-auto justify-start items-start"
         }
       `}
     >
       <div
         className={`
           flex items-center cursor-pointer transition-all duration-300
-          ${isOpen ? "justify-start gap-3" : "justify-start"}
+          ${isOpen ? "justify-start gap-5" : "justify-start"}
         `}
         onClick={toggleSidebar}
       >
@@ -61,7 +66,10 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
       {children && (
         <div
           className={`
-            mt-6 flex flex-col h-[calc(100%-4rem)] justify-between transition-opacity duration-300
+            h-[calc(100%-4rem)] mt-4 
+            flex flex-col justify-between 
+            transition-opacity duration-300
+            
             ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
           `}
         >

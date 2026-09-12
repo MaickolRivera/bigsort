@@ -2,21 +2,37 @@ import CodeField from "../components/CodeField";
 import Sidebar from "../components/Sidebar";
 import SidebarSection from "../components/SidebarSection";
 import IconDebugger from "../components/icons/general/IconDebugger";
-import IconGithub from "../components/icons/general/IconGithub";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import IconJS from "../components/icons/languajes/IconJS";
+import IconJava from "../components/icons/languajes/IconJava";
+import IconPython from "../components/icons/languajes/IconPython";
 import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
+import SwitchOption from "@/components/SwitchOption";
 
 type DebuggerSidebarProps = {
-  codeLanguage: LanguageKey,
-  codeAlgorithm: AlgorithmKey;
-  message: MessageKey | null;
+    codeLanguage: LanguageKey,
+    codeAlgorithm: AlgorithmKey;
+    message: MessageKey | null;
+
+    setCodeLanguage: (value: LanguageKey) => void;
 }
 
-function DebuggerSidebar({ codeLanguage, codeAlgorithm, message}: DebuggerSidebarProps) {
+function DebuggerSidebar({ 
+    codeLanguage, setCodeLanguage,
+    codeAlgorithm, 
+    message}: DebuggerSidebarProps) {
     return (
         <Sidebar title="DEBUGGER" icon={IconDebugger} side="right"> 
-            <div className="flex flex-col gap-6 mb-5">
+            <div className="flex flex-col gap-5 mb-5">
+                
+                <SidebarSection title="LANGUAGE">
+                    <SwitchOption<LanguageKey>
+                        selectedValue={codeLanguage}
+                        setSelectedValue={setCodeLanguage}
+                        options={[<IconJS />, <IconJava />, <IconPython />]}
+                        values={['JAVASCRIPT', 'JAVA', 'PYTHON']}
+                    />
+                </SidebarSection>
 
                 <SidebarSection title="CODE">
                     <CodeField codeAlgorithm={codeAlgorithm} codeLanguage={codeLanguage} />
@@ -37,22 +53,6 @@ function DebuggerSidebar({ codeLanguage, codeAlgorithm, message}: DebuggerSideba
                     </Card>
                 </SidebarSection>
             </div>
-
-            <SidebarSection title="GITHUB">
-                <Button
-                    asChild
-                    variant="outline"
-                    className="w-full justify-between px-5 py-2.5">
-                    <a    
-                        href="https://github.com/m4icol/bigsort"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span className="text-sm">VIEW REPOSITORY</span>
-                        <IconGithub />
-                    </a>
-                    </Button>
-            </SidebarSection>
         </Sidebar>
     );
 }

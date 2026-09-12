@@ -7,11 +7,10 @@ import SidebarSection from "../components/SidebarSection";
 import ButtonRandom from "../components/ButtonRandom";
 import type { AlgorithmKey, LanguageKey, OrderKey, SpeedKey } from "../types";
 import { useState } from "react";
-import IconJS from "../components/icons/languajes/IconJS";
-import IconJava from "../components/icons/languajes/IconJava";
-import IconPython from "../components/icons/languajes/IconPython";
 import SunIcon from "../components/icons/config/IconWhiteMode";
 import MoonIcon from "../components/icons/config/IconDarkMode";
+import { Button } from "@/components/ui/button";
+import IconGithub from "@/components/icons/general/IconGithub";
 
 type SettingSidebarProps = {
     rangeValue: number;
@@ -26,9 +25,6 @@ type SettingSidebarProps = {
 
     algOrder: OrderKey;
     setAlgOrder: (value: OrderKey) => void;
-
-    codeLanguage: LanguageKey;
-    setCodeLanguage: (value: LanguageKey) => void;
 
     theme: string;
     handleThemeChange: (value: string) => void;
@@ -48,23 +44,23 @@ function SettingSidebar({
     algOrder,
     setAlgOrder,
 
-    codeLanguage,
-    setCodeLanguage,
-
     theme,
     handleThemeChange,
   }: SettingSidebarProps) {
 
-    const [selectedLanguage, setSelectedLanguage] = useState("ENGLISH");
+    const [selectedLanguage, setSelectedLanguage] = useState<"EN" | "ES">("EN");
 
-    const themeIcons = {
-      light: <SunIcon />,
-      dark: <MoonIcon />
+    const toggleLanguage = () => {
+        setSelectedLanguage((prev) => (prev === "EN" ? "ES" : "EN"));
     };
-    
+
+    const toggleTheme = () => {
+        handleThemeChange(theme === "dark" ? "light" : "dark");
+    };
+
     return (
         <Sidebar title="SETTINGS" icon={IconSettings} side="left">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5">
 
                 <SidebarSection title="ALGORITHMS">
                     <Dropdown<AlgorithmKey>
@@ -98,36 +94,42 @@ function SettingSidebar({
                         values={["ASCENDING", "DESCENDING"]}
                     />
                 </SidebarSection>
-
-                <SidebarSection title="CODE LANGUAGE">
-                    <SwitchOption<LanguageKey>
-                        selectedValue={codeLanguage}
-                        setSelectedValue={setCodeLanguage}
-                        options={[<IconJS />, <IconJava />, <IconPython />]}
-                        values={['JAVASCRIPT', 'JAVA', 'PYTHON']}
-                    />
-                </SidebarSection>
             </div>
 
-            <div className="flex flex-col gap-6 mt-6">
+            <div className="flex flex-col gap-5">
+                <SidebarSection title="CONFIG">
+                    <div className="flex flex-row gap-2 w-full">
+                        <Button
+                            variant="outline"
+                            className="flex-1"
+                            onClick={toggleLanguage}
+                        >
+                            {selectedLanguage}
+                        </Button>
 
-                <SidebarSection title="VISUAL MODE">
-                    <SwitchOption<string>
-                        selectedValue={theme}
-                        setSelectedValue={handleThemeChange}
-                        options={[themeIcons.light, themeIcons.dark]}
-                        values={["light", "dark"]}
-                    />
+                        <Button
+                            variant="outline"
+                            className="flex-1"
+                            onClick={toggleTheme}
+                        >
+                            {theme === "dark" ? <MoonIcon /> : <SunIcon />}
+                        </Button>
+
+                        <Button
+                            asChild
+                            variant="outline"
+                            className="flex-1"
+                        >
+                            <a
+                                href="https://github.com/maickolrivera/bigsort"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <IconGithub />
+                            </a>
+                        </Button>
+                    </div>
                 </SidebarSection>
-
-                <SidebarSection title="LANGUAGE">
-                    <Dropdown<string>
-                        values={["ENGLISH", "SPANISH"]}
-                        selectedValue={selectedLanguage}
-                        setSelectedValue={setSelectedLanguage}
-                    />
-                </SidebarSection>
-
             </div>
         </Sidebar>
     )

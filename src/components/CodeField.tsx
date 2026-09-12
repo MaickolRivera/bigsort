@@ -22,11 +22,11 @@ export default function CodeField({ codeAlgorithm, codeLanguage }: CodeFieldProp
       </CardHeader>
       <CardContent>
         <ScrollArea type="always" className="w-full whitespace-nowrap">
-  <pre className="text-sm pb-5">
-    <code>{code}</code>
-  </pre>
-  <ScrollBar orientation="horizontal"/>
-</ScrollArea>
+          <pre className="text-sm pb-5">
+            <code>{code}</code>
+          </pre>
+          <ScrollBar orientation="horizontal"/>
+        </ScrollArea>
       </CardContent>
     </Card>
   );

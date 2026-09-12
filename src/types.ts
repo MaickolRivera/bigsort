@@ -15,4 +15,6 @@ export interface SortStep {
 
 export type OrderKey = "ASCENDING" | "DESCENDING"
 
+export type LanguageSystemKey = "EN" | "ES"
+
 export type AnimationState = "IDLE" | "RUNNING" | "PAUSED" | "COMPLETED";

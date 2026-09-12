@@ -51,9 +51,6 @@ function App() {
         algOrder={algOrder}
         setAlgOrder={setAlgOrder}
 
-        codeLanguage={codeLanguage} 
-        setCodeLanguage={setCodeLanguage} 
-
         theme={theme}
         handleThemeChange={handleThemeChange}
       />
@@ -69,6 +66,7 @@ function App() {
 
       <SidebarCode 
         codeLanguage={codeLanguage} 
+        setCodeLanguage={setCodeLanguage} 
         codeAlgorithm={codeAlgorithm}
         message={message}
       />
