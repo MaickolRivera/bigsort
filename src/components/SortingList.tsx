@@ -6,13 +6,19 @@ type SortingListProps = {
     currentList: number[]
 }
 
-export default function SortingList({handleCreateList ,currentList}: SortingListProps){
+export default function SortingList({ handleCreateList, currentList }: SortingListProps) {
 
-    return(
-        <div className="flex flex-row gap-3">
-            <ButtonRandom onClick={handleCreateList} />
+    return (
+        <div className="flex flex-row items-stretch gap-2">
+            <ButtonRandom
+                onClick={handleCreateList}
+                className="h-full shrink-0 bg-sidebar border-sidebar-border text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+            />
 
-            <PanelItem className="cursor-not-allowed flex flex-row gap-2 text-xs lg:text-base">
+            <PanelItem
+                className="cursor-default flex-1 justify-start text-left text-sm leading-relaxed
+                bg-sidebar border-sidebar-border text-sidebar-foreground/80"
+            >
                 {currentList.join(", ")}
             </PanelItem>
         </div>
