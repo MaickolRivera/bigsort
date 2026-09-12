@@ -17,7 +17,7 @@ export default function SortingList({ handleCreateList, currentList }: SortingLi
 
             <PanelItem
                 className="cursor-default flex-1 justify-start text-left text-sm leading-relaxed
-                bg-sidebar border-sidebar-border text-sidebar-foreground/80"
+                bg-sidebar border-sidebar-border text-sidebar-foreground/80 py-2"
             >
                 {currentList.join(", ")}
             </PanelItem>

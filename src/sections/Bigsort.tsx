@@ -38,18 +38,18 @@ function BigSort({
   const bestCase = snippets[codeAlgorithm][codeLanguage].complexity.best;
 
   return (
-    <div className="flex flex-col md:px-50 lg:items-center gap-13 py-6 lg:py-20 flex-auto overflow-y-scroll scroll-bar-custom w-full">
+    <div className="flex flex-col md:px-50 lg:items-center gap-10 justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
 
-      <div className="flex gap-10 lg:gap-2 flex-col justify-center items-center w-full lg:w-[24rem]">
+      <div className="flex gap-10 lg:gap-4 flex-col justify-center items-center w-full lg:w-[24rem]">
         <h1 className="text-2xl lg:text-3xl font-bold">BIG S(O)RT</h1>
-        <p className="text-xs text-WM-subtext dark:text-BM-subtext text-center px-8 lg:px-0">
+        <p className="text-xs text-sidebar-foreground/70 text-center px-8 lg:px-0">
           Interactive tool to explore how sorting algorithms work, with live visuals, controls, speed and code in multiple languages.
         </p>
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-5">
 
-        <div className="flex flex-row gap-2.5 h-90 px-10 justify-center items-end overflow-x-hidden w-full overflow-y-hidden">
+        <div className="flex flex-row gap-2.5 h-100 px-10 justify-center items-end overflow-x-hidden w-full overflow-y-hidden">
           {currentList.map((element, i) => (
             <LayoutBar
               key={i}

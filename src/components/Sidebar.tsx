@@ -36,7 +36,7 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
         flex flex-col fixed z-10 
         
         top-0 bottom-0 
-        px-7 py-5 pb-1
+        px-5 py-5 pb-1
         lg:top-2 lg:bottom-5 
         lg:px-5 
         ${isOpen
