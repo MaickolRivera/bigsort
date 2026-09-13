@@ -2,7 +2,6 @@ import CodeField from "../components/CodeField";
 import Sidebar from "../components/Sidebar";
 import SidebarSection from "../components/SidebarSection";
 import IconDebugger from "../components/icons/general/IconDebugger";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import IconJS from "../components/icons/languajes/IconJS";
 import IconJava from "../components/icons/languajes/IconJava";
 import IconPython from "../components/icons/languajes/IconPython";
