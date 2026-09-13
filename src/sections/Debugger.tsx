@@ -24,17 +24,14 @@ function DebuggerSidebar({
     return (
         <Sidebar title="DEBUGGER" icon={IconDebugger} side="right"> 
             <div className="flex flex-col gap-5 mb-5">
-                
-                <SidebarSection title="LANGUAGE">
+
+                <SidebarSection title="CODE">
                     <SwitchOption<LanguageKey>
                         selectedValue={codeLanguage}
                         setSelectedValue={setCodeLanguage}
                         options={[<IconJS />, <IconJava />, <IconPython />]}
                         values={['JAVASCRIPT', 'JAVA', 'PYTHON']}
                     />
-                </SidebarSection>
-
-                <SidebarSection title="CODE">
                     <CodeField codeAlgorithm={codeAlgorithm} codeLanguage={codeLanguage} />
                 </SidebarSection>
 
