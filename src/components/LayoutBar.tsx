@@ -8,11 +8,11 @@ type LayoutBarProps = {
 function LayoutBar({ level = 1, index, isActive, actionType }: LayoutBarProps) {
 
   const getBarColor = () => {
-    if (!isActive) return "bg-sidebar";
+    if (!isActive) return "bg-chart-5";
     if (actionType === "compare") return "bg-compare";
     if (actionType === "swap") return "bg-swap";
     if (actionType === "complete") return "bg-complete";
-    return "bg-sidebar";
+    return "bg-chart-5";
   };
 
   const calculateHeight = (level: number): number => {

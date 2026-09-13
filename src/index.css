@@ -29,7 +29,7 @@ html, body {
   --chart-1: #1e1e1e;
   --chart-2: #494646;
   --chart-3: #a1967f;
-  --chart-4: #c0ba9f;
+  --chart-4: rgb(155, 151, 133);
   --chart-5: #d4c9b3;
   --sidebar: #f0eedf;
   --sidebar-foreground: #2e2e2e;
@@ -86,8 +86,8 @@ html, body {
   --chart-1: #9e9e9e;
   --chart-2: #5d5b5b;
   --chart-3: #363636;
-  --chart-4: #4b4a4a;
-  --chart-5: #2e2e2e;
+  --chart-4: #262626;
+  --chart-5: #171716;
   --sidebar: #141414;
   --sidebar-foreground: #ebe3d7;
   --sidebar-primary: #d5c8be;
@@ -188,13 +188,13 @@ html, body {
 }
 
 .bg-compare {
-  background-color: var(--chart-5);
+  background-color: var(--chart-4);
   transition: background-color 0.2s ease;
   animation: jump-swap 0.4s ease;
 }
 
 .bg-swap {
-  background-color: var(--chart-4);
+  background-color: var(--chart-3);
   transition: background-color 0.2s ease;
   animation: jump-swap 0.4s ease;
 }
