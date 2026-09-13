@@ -7,14 +7,18 @@ export const INSERTION: AlgorithmData = {
   },
 
   info: {
-    description: `Builds the sorted list one element at a time. It takes each element and inserts it into its correct position within the already-sorted part of the list.
-  It's efficient for small or nearly sorted lists, similar to how a person sorts playing cards by hand.`,
+    description: 
+`Builds the sorted list one element at a time. 
+It takes each element and inserts it into its correct position within the already-sorted part of the list.
+
+It's efficient for small or nearly sorted lists, similar to how a person sorts playing cards by hand.`,
     
-    explanation: `1. Take the next unsorted element
-  2. Compare it with the elements already sorted to its left
-  3. Shift larger elements one position to the right
-  4. Insert the element into its correct position
-  5. Repeat until the entire list is sorted`
+    explanation: `
+Take the next unsorted element
+Compare it with the elements already sorted to its left
+Shift larger elements one position to the right
+Insert the element into its correct position
+Repeat until the entire list is sorted`
   },
 
   code: {

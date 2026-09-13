@@ -16,7 +16,7 @@ const sideConfig: Record<Side, { sizeSidebar: string; position: string; rounded:
     rounded: "rounded-br-2xl lg:rounded-2xl",
   },
   right: {
-    sizeSidebar: "w-screen lg:w-80",
+    sizeSidebar: "w-screen lg:w-90",
     position: "right-0 lg:right-2",
     rounded: "rounded-bl-2xl lg:rounded-2xl",
   },

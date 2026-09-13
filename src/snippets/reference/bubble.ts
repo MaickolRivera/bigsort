@@ -7,14 +7,17 @@ export const BUBBLE: AlgorithmData = {
   },
 
   info: {
-    description: `A simple comparison-based sorting algorithm. It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-  It gets its name because smaller elements "bubble" toward the top of the list with each pass.`,
+    description: 
+`A simple comparison-based sorting algorithm. 
+It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
+
+It gets its name because smaller elements "bubble" toward the top of the list with each pass.`,
     
     explanation: `
-  1. Compare each pair of adjacent elements
-  2. Swap them if the left element is greater
-  3. After each pass, the largest unsorted element settles into its final position
-  4. Repeat until no more swaps are needed`
+Compare each pair of adjacent elements
+Swap them if the left element is greater
+After each pass, the largest unsorted element settles into its final position
+Repeat until no more swaps are needed`
   },
 
   code: {

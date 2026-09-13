@@ -7,14 +7,18 @@ export const QUICK: AlgorithmData = {
   },
 
   info: {
-    description: `A divide-and-conquer algorithm. It picks an element as a pivot and partitions the list so that smaller elements end up to its left and larger elements to its right.
-  It then applies the same process recursively to each half until the entire list is sorted.`,
+    description: 
+`A divide-and-conquer algorithm. 
+It picks an element as a pivot and partitions the list so that smaller elements end up to its left and larger elements to its right.
+
+It then applies the same process recursively to each half until the entire list is sorted.`,
     
-    explanation: `1. Pick an element as the pivot (here, the last one in the range)
-  2. Partition the list: elements smaller than the pivot go left, larger ones go right
-  3. Place the pivot in its final position (partitioning)
-  4. Recursively apply the same process to the left sublist
-  5. Recursively apply the same process to the right sublist`
+    explanation: `
+Pick an element as the pivot (here, the last one in the range)
+Partition the list: elements smaller than the pivot go left, larger ones go right
+Place the pivot in its final position (partitioning)
+Recursively apply the same process to the left sublist
+Recursively apply the same process to the right sublist`
   },
 
   code: {
