@@ -134,7 +134,7 @@ function App() {
   }, []);
 
   return (
-    <div className="flex overflow-y-scroll scroll-bar-custom flex-row justify-between h-screen w-screen font-display">
+    <div className="flex overflow-y-scroll scroll-bar-custom flex-row justify-between h-screen w-screen font-display background">
       <SidebarSettings
         algOrder={algOrder}
         setAlgOrder={setAlgOrder}
@@ -165,16 +165,15 @@ function App() {
         countSteps={countSteps}
         countSwaps={countSwaps}
         isAnimating={isAnimating}
+        message={message}
 
         handleRun={handleRun}
-        handleReset={handleReset}
-      />
+        handleReset={handleReset}       />
 
       <SidebarCode
         codeLanguage={codeLanguage}
         setCodeLanguage={setCodeLanguage}
         codeAlgorithm={codeAlgorithm}
-        message={message}
       />
     </div>
   )

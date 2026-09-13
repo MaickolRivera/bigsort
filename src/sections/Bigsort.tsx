@@ -1,8 +1,11 @@
 import LayoutBar from "../components/LayoutBar";
 import { snippets } from "../snippets/reference";
-import type { AlgorithmKey, LanguageKey } from "../types";
+import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
 import Stats from "./Stats";
 import Controls from "./Controls";
+import SidebarSection from "@/components/SidebarSection";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { StatItem } from "@/components/Item";
 
 type BigSortProps = {
   codeLanguage: LanguageKey;
@@ -14,6 +17,8 @@ type BigSortProps = {
   countSteps: number;
   countSwaps: number;
   isAnimating: boolean;
+
+  message: MessageKey | null;
 
   handleRun: () => void;
   handleReset: () => void;
@@ -27,6 +32,8 @@ function BigSort({
   countSteps,
   countSwaps,
   isAnimating,
+
+  message,
 
   handleRun,
   handleReset,
@@ -60,11 +67,54 @@ function BigSort({
 
         </div>
 
-        <Controls isAnimating={isAnimating} handleRun={handleRun} handleReset={handleReset}></Controls>
 
+        <Controls isAnimating={isAnimating} handleRun={handleRun} handleReset={handleReset}></Controls>
+        
+        <div className="flex flex-col md:flex-row gap-3 justify-center px-5">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xs font-normal text-muted-foreground">
+                {!message?.title ? `${codeAlgorithm} SORT | READY TO START` : message.title}
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-xs">
+                {!message?.description ? "Press the run button to begin sorting." : message.description}
+              </p>
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xs font-normal text-muted-foreground">
+                STEPS
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-xs text-center">
+                {countSteps}
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xs font-normal text-muted-foreground">
+                SWAPS
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-xs text-center">
+                {countSwaps}
+              </p>
+            </CardContent>
+          </Card>
+        </div>
       </div>
 
-      <Stats bestCase={bestCase} worstCase={worstCase} countSteps={countSteps} countSwaps={countSwaps} />
+      {/*
+      <Stats bestCase={bestCase} worstCase={worstCase}/>
+      */}
 
     </div>
   );

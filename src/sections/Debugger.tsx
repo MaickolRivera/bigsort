@@ -6,7 +6,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card"
 import IconJS from "../components/icons/languajes/IconJS";
 import IconJava from "../components/icons/languajes/IconJava";
 import IconPython from "../components/icons/languajes/IconPython";
-import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
+import type { AlgorithmKey, LanguageKey } from "../types";
 import SwitchOption from "@/components/SwitchOption";
 import { snippets } from "@/snippets/reference";
 import StepsTimeline from "@/components/StepTimeLine";
@@ -14,15 +14,13 @@ import StepsTimeline from "@/components/StepTimeLine";
 type DebuggerSidebarProps = {
     codeLanguage: LanguageKey,
     codeAlgorithm: AlgorithmKey;
-    message: MessageKey | null;
 
     setCodeLanguage: (value: LanguageKey) => void;
 }
 
 function DebuggerSidebar({ 
     codeLanguage, setCodeLanguage,
-    codeAlgorithm, 
-    message}: DebuggerSidebarProps) {
+    codeAlgorithm}: DebuggerSidebarProps) {
 
     const description = snippets[codeAlgorithm].info.description;
     const explanation = snippets[codeAlgorithm].info.explanation;
@@ -51,21 +49,6 @@ function DebuggerSidebar({
                         values={['JAVASCRIPT', 'JAVA', 'PYTHON']}
                     />
                     <CodeField codeAlgorithm={codeAlgorithm} codeLanguage={codeLanguage} />
-                </SidebarSection>
-
-                <SidebarSection title="STEP BY STEP">
-                    <Card>
-                        <CardHeader>
-                            <CardTitle className="text-xs font-normal text-muted-foreground">
-                            {!message?.title ? `${codeAlgorithm} SORT | READY TO START` : message.title}
-                            </CardTitle>
-                        </CardHeader>
-                        <CardContent>
-                            <p className="text-xs">
-                            {!message?.description ? "Press the run buttom to begin sorting." : message.description}
-                            </p>
-                        </CardContent>
-                    </Card>
                 </SidebarSection>
             </div>
         </Sidebar>

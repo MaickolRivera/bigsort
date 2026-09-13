@@ -9,7 +9,7 @@ html, body {
 :root {
   --background: #f0eedf;
   --foreground: #2e2e2e;
-  --card: #f8f6e8;
+  --card: #efeddd;
   --card-foreground: #2e2e2e;
   --popover: #f3ecdd;
   --popover-foreground: #2e2e2e;
@@ -66,7 +66,7 @@ html, body {
 .dark {
   --background: #181818;
   --foreground: #ebe3d7;
-  --card: #1c1c1c;
+  --card: #181818;
   --card-foreground: #ebe3d7;
   --popover: #1c1c1c;
   --popover-foreground: #ebe3d7;
