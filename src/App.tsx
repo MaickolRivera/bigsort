@@ -3,11 +3,11 @@ import BigSort from "./sections/Bigsort";
 import SidebarCode from "./sections/Debugger";
 import SidebarSettings from "./sections/Settings";
 import type { AlgorithmKey, LanguageKey, MessageKey, OrderKey, SortStep, SpeedKey } from "./types";
-import { getBubbleSortSteps } from "./snippets/animation/bubbleSteps";
-import { getInsertionSortSteps } from "./snippets/animation/insertionSteps";
-import { getSelectionSortSteps } from "./snippets/animation/selectionSteps";
-import { getQuickSortSteps } from "./snippets/animation/quickSteps";
-import { inCurrentlyAnimating, playSteps, stopAnimation } from "./snippets/animation/playSteps";
+import { getBubbleSortSteps } from "./snippets/debugger/bubbleSteps";
+import { getInsertionSortSteps } from "./snippets/debugger/insertionSteps";
+import { getSelectionSortSteps } from "./snippets/debugger/selectionSteps";
+import { getQuickSortSteps } from "./snippets/debugger/quickSteps";
+import { inCurrentlyAnimating, playSteps, stopAnimation } from "./snippets/debugger/playSteps";
 
 function App() {
   const [rangeValue, setRangeValue] = useState(10);

@@ -1,5 +1,5 @@
 import LayoutBar from "../components/LayoutBar";
-import { snippets } from "../snippets/debugger";
+import { snippets } from "../snippets/reference";
 import type { AlgorithmKey, LanguageKey } from "../types";
 import Stats from "./Stats";
 import Controls from "./Controls";
@@ -20,9 +20,7 @@ type BigSortProps = {
 };
 
 function BigSort({
-  codeLanguage,
   codeAlgorithm,
-
   currentList,
   activeIndices,
   actionType,
@@ -34,8 +32,8 @@ function BigSort({
   handleReset,
 }: BigSortProps) {
 
-  const worstCase = snippets[codeAlgorithm][codeLanguage].complexity.worst;
-  const bestCase = snippets[codeAlgorithm][codeLanguage].complexity.best;
+  const worstCase = snippets[codeAlgorithm].complexity.worst;
+  const bestCase = snippets[codeAlgorithm].complexity.best;
 
   return (
     <div className="flex flex-col md:px-50 lg:items-center gap-10 mt-22 lg:mt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">

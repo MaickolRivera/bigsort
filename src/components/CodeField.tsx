@@ -1,17 +1,15 @@
-import { snippets } from "../snippets/debugger";
-import type { LanguageKey } from "../types";
+import { snippets } from "../snippets/reference";
+import type { AlgorithmKey, LanguageKey } from "../types";
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
 
-type AlgorithmKey = keyof typeof snippets;
 type CodeFieldProps = {
   codeAlgorithm: AlgorithmKey;
   codeLanguage: LanguageKey;
 };
 
 export default function CodeField({ codeAlgorithm, codeLanguage }: CodeFieldProps) {
-  const langKey = codeLanguage as LanguageKey;
-  const code = snippets[codeAlgorithm][langKey]?.code ?? "// Code not available.";
+  const code = snippets[codeAlgorithm].code[codeLanguage] ?? "// Code not available.";
 
   return (
     <Card>

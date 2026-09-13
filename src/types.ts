@@ -7,6 +7,16 @@ export type MessageKey = {
   description: string;
 }
 
+export type InfoKey = {
+  description: string;
+  explanation: string;
+}
+
+export type ComplexityKey = {
+  best: string;
+  worst: string;
+}
+
 export interface SortStep {
   type: 'compare' | 'swap' | 'message' | 'complete'
   indices: number[];
@@ -14,7 +24,13 @@ export interface SortStep {
 }
 
 export type OrderKey = "ASCENDING" | "DESCENDING"
-
 export type LanguageSystemKey = "EN" | "ES"
-
 export type AnimationState = "IDLE" | "RUNNING" | "PAUSED" | "COMPLETED";
+
+export type AlgorithmData = {
+  complexity: ComplexityKey;
+  info: InfoKey;
+  code: Record<LanguageKey, string>;
+};
+
+export type Snippets = Record<AlgorithmKey, AlgorithmData>;
