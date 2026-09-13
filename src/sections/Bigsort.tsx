@@ -1,11 +1,7 @@
 import LayoutBar from "../components/LayoutBar";
-import { snippets } from "../snippets/reference";
 import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
-import Stats from "./Stats";
 import Controls from "./Controls";
-import SidebarSection from "@/components/SidebarSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { StatItem } from "@/components/Item";
 
 type BigSortProps = {
   codeLanguage: LanguageKey;
@@ -38,9 +34,6 @@ function BigSort({
   handleRun,
   handleReset,
 }: BigSortProps) {
-
-  const worstCase = snippets[codeAlgorithm].complexity.worst;
-  const bestCase = snippets[codeAlgorithm].complexity.best;
 
   return (
     <div className="flex flex-col md:px-50 lg:items-center gap-10 mt-22 lg:mt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
