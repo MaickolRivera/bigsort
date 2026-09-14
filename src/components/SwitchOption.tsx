@@ -37,7 +37,7 @@ export default function SwitchOption<T extends string>({
             key={value}
             value={value}
             aria-label={`Switch to ${value}`}
-            className="w-full"
+            className="w-full cursor-pointer"
           >
             {option}
           </ToggleGroupItem>

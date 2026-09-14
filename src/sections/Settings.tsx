@@ -97,7 +97,7 @@ function SettingSidebar({
                 </SidebarSection>
 
                 <SidebarSection title="NUMBERS">
-                    <div className="flex flex-row items-stretch gap-2">
+                    <div className="flex flex-row items-stretch gap-2 cursor-pointer">
                         <ButtonRandom onClick={randomNumberItems} />
                         <Range value={rangeValue} onChange={setRangeValue} />
                     </div>
@@ -113,7 +113,7 @@ function SettingSidebar({
                     <div className="flex flex-row gap-2 w-full">
                         <Button
                             variant="outline"
-                            className="flex-1"
+                            className="flex-1 cursor-pointer"
                             onClick={toggleLanguage}
                         >
                             {selectedLanguage}
@@ -121,7 +121,7 @@ function SettingSidebar({
 
                         <Button
                             variant="outline"
-                            className="flex-1"
+                            className="flex-1 cursor-pointer"
                             onClick={toggleTheme}
                         >
                             {theme === "dark" ? <MoonIcon /> : <SunIcon />}
@@ -130,7 +130,7 @@ function SettingSidebar({
                         <Button
                             asChild
                             variant="outline"
-                            className="flex-1"
+                            className="flex-1 cursor-pointer"
                         >
                             <a href="https://github.com/maickolrivera/bigsort" target="_blank" rel="noopener noreferrer">
                                 <IconGithub />

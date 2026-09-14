@@ -15,7 +15,7 @@ export default function ButtonRandom({ onClick, className }: ButtonRandomProps) 
       variant="outline"
       size="icon"
       className={cn(
-        "shrink-0 bg-sidebar border-sidebar-border text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+        "cursor-pointer shrink-0 bg-sidebar border-sidebar-border text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
         className
       )}
     >

@@ -26,7 +26,7 @@ export default function Dropdown<T extends string>({
 
   return (
     <Select value={selectedValue} onValueChange={handleSelected}>
-      <SelectTrigger className="w-full">
+      <SelectTrigger className="w-full cursor-pointer">
         <SelectValue />
       </SelectTrigger>
       <SelectContent>

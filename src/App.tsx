@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import BigSort from "./sections/Bigsort";
-import SidebarCode from "./sections/Debugger";
+import OverviewSidebar from "./sections/Overview";
 import SidebarSettings from "./sections/Settings";
 import type { AlgorithmKey, LanguageKey, MessageKey, OrderKey, SortStep, SpeedKey } from "./types";
 import { getBubbleSortSteps } from "./snippets/debugger/bubbleSteps";
@@ -168,9 +168,10 @@ function App() {
         message={message}
 
         handleRun={handleRun}
-        handleReset={handleReset}       />
+        handleReset={handleReset}
+      />
 
-      <SidebarCode
+      <OverviewSidebar
         codeLanguage={codeLanguage}
         setCodeLanguage={setCodeLanguage}
         codeAlgorithm={codeAlgorithm}
