@@ -2,6 +2,8 @@ import LayoutBar from "../components/LayoutBar";
 import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
 import Controls from "./Controls";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { getActionBadgeClass, getActionColor } from "../lib/actionColor";
 
 type BigSortProps = {
   codeLanguage: LanguageKey;
@@ -21,7 +23,6 @@ type BigSortProps = {
 };
 
 function BigSort({
-  codeAlgorithm,
   currentList,
   activeIndices,
   actionType,
@@ -67,9 +68,12 @@ function BigSort({
           <Card>
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
-                {!message?.title ? `${codeAlgorithm} SORT | READY TO START` : message.title}
+                <Badge className={`uppercase text-[10px] transition-none ${getActionBadgeClass(actionType)}`}>
+                  {message?.title ?? "ready"}
+                </Badge>
               </CardTitle>
             </CardHeader>
+            
             <CardContent>
               <p className="text-xs">
                 {!message?.description ? "Press the run button to begin sorting." : message.description}
