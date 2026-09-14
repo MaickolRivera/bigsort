@@ -37,7 +37,7 @@ function BigSort({
 }: BigSortProps) {
 
   return (
-    <div className="flex flex-col md:px-50 lg:items-center gap-10 mt-22 lg:mt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
+    <div className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:mt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
 
       <div className="flex gap-4 flex-col justify-center items-center w-full lg:w-[24rem]">
         <h1 className="text-2xl lg:text-3xl font-bold">BIG S(O)RT</h1>
@@ -67,7 +67,7 @@ function BigSort({
         <div className="flex flex-col md:flex-row gap-3 justify-center px-5">
           <Card>
             <CardHeader>
-              <CardTitle className="text-xs font-normal text-muted-foreground">
+              <CardTitle className="text-xs font-normal text-muted-foreground ">
                 <Badge className={`uppercase text-[10px] transition-none ${getActionBadgeClass(actionType)}`}>
                   {message?.title ?? "ready"}
                 </Badge>
@@ -81,27 +81,27 @@ function BigSort({
             </CardContent>
           </Card>
           
-          <Card>
+          <Card className="text-center">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
                 STEPS
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xs text-center">
+              <p className="text-xs">
                 {countSteps}
               </p>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="text-center">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
                 SWAPS
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xs text-center">
+              <p className="text-xs">
                 {countSwaps}
               </p>
             </CardContent>
