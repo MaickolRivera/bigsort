@@ -65,7 +65,7 @@ function BigSort({
         <Controls isAnimating={isAnimating} handleRun={handleRun} handleReset={handleReset}></Controls>
         
         <div className="flex flex-col md:flex-row gap-3 justify-center px-5">
-          <Card className="w-105 overflow-hidden">
+          <Card className="w-full lg:w-105 overflow-hidden">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
                 <Badge className={`uppercase text-[10px] transition-none ${getActionBadgeClass(actionType)}`}>
