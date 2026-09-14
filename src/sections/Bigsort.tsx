@@ -3,7 +3,7 @@ import type { AlgorithmKey, LanguageKey, MessageKey } from "../types";
 import Controls from "./Controls";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getActionBadgeClass, getActionColor } from "../lib/actionColor";
+import { getActionBadgeClass } from "../lib/actionColor";
 
 type BigSortProps = {
   codeLanguage: LanguageKey;
