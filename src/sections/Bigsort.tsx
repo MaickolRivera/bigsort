@@ -37,7 +37,7 @@ function BigSort({
 }: BigSortProps) {
 
   return (
-    <div className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:mt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
+    <div className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:pt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
 
       <div className="flex gap-4 flex-col justify-center items-center w-full lg:w-[24rem]">
         <h1 className="text-2xl lg:text-3xl font-bold">BIG S(O)RT</h1>
@@ -112,6 +112,20 @@ function BigSort({
       {/*
       <Stats bestCase={bestCase} worstCase={worstCase}/>
       */}
+
+      <footer className="hidden md:block fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <p className="text-xs text-neutral-500 tracking-wide">
+          Built with <span className="text-neutral-400">♥</span> by{" "}
+          <a 
+            href="https://www.linkedin.com/in/maickol-rivera/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-neutral-400 hover:text-white transition-colors cursor-pointer"
+          >
+            Maickol Rivera
+          </a>
+        </p>
+      </footer>
 
     </div>
   );
