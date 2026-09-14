@@ -20,7 +20,7 @@ export function getQuickSortSteps(array: number[], order: OrderKey): SortStep[] 
       indices: Array.from({ length: end - start + 1 }, (_, i) => start + i), 
       message: {
         title: "SORTING SUB-ARRAY",
-        description: `[${start}..${end}] using pivot ${arr[end]}`
+        description: `Using pivot ${arr[end]}ㅤ||ㅤrange [${start}..${end}]`
       }
     });
 
@@ -39,7 +39,7 @@ export function getQuickSortSteps(array: number[], order: OrderKey): SortStep[] 
         indices: [j, end], 
         message: {
           title: "COMPARING",
-          description: `${arr[j]} (index ${j}) with pivot ${pivot}`
+          description: `Comparing with pivotㅤ||ㅤ${arr[j]}, ${pivot}ㅤ||ㅤ[${j}], [${end}]`
         }
       });
 
@@ -51,7 +51,7 @@ export function getQuickSortSteps(array: number[], order: OrderKey): SortStep[] 
           indices: [i, j], 
           message: {
             title: "SWAPPING",
-            description: `Moving ${arr[j]} (index ${j}) to ${orderText} partition by swapping with ${arr[i]} (index ${i})`
+            description: `Moving to ${orderText} partitionㅤ||ㅤ${arr[j]}, ${arr[i]}ㅤ||ㅤ[${j}], [${i}]`
           }
         });
 
@@ -66,7 +66,7 @@ export function getQuickSortSteps(array: number[], order: OrderKey): SortStep[] 
       indices: [i, end], 
       message: {
         title: "PLACING PIVOT",
-        description: `Placing ${pivot} at index ${i}`
+        description: `Placing pivot in final positionㅤ||ㅤ${pivot}ㅤ||ㅤ[${i}]`
       }
     });
 

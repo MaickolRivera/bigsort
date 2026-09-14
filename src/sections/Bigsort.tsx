@@ -53,7 +53,7 @@ function BigSort({
             <LayoutBar
               key={i}
               level={element}
-              index={i + 1}
+              index={i}
               isActive={activeIndices.includes(i)}
               actionType={actionType}
             />
@@ -65,9 +65,9 @@ function BigSort({
         <Controls isAnimating={isAnimating} handleRun={handleRun} handleReset={handleReset}></Controls>
         
         <div className="flex flex-col md:flex-row gap-3 justify-center px-5">
-          <Card>
+          <Card className="w-105 overflow-hidden">
             <CardHeader>
-              <CardTitle className="text-xs font-normal text-muted-foreground ">
+              <CardTitle className="text-xs font-normal text-muted-foreground">
                 <Badge className={`uppercase text-[10px] transition-none ${getActionBadgeClass(actionType)}`}>
                   {message?.title ?? "ready"}
                 </Badge>
@@ -75,7 +75,7 @@ function BigSort({
             </CardHeader>
             
             <CardContent>
-              <p className="text-xs">
+              <p className="text-sm pl-2">
                 {!message?.description ? "Press the run button to begin sorting." : message.description}
               </p>
             </CardContent>

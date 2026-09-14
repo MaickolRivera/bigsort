@@ -20,7 +20,7 @@ export function getInsertionSortSteps(array: number[], order: OrderKey): SortSte
         indices: [i],
         message: {
           title: "INSERTION INIT",
-          description: `Current value: ${arr[i]}. Searching correct position in the sorted part`
+          description: `Searching correct position in the sorted partㅤ||ㅤ${arr[i]}ㅤ:ㅤ[${i}]`
         }
       });
        
@@ -32,7 +32,7 @@ export function getInsertionSortSteps(array: number[], order: OrderKey): SortSte
           indices: [j - 1, j],
           message: {
             title: "INSERTING",
-            description: `${arr[j - 1]} ${orderSign} ${arr[j]} = true, shifting ${arr[j]} ${orderText} to find its correct position`
+            description: `Shifting ${orderText}ㅤ||ㅤ${arr[j - 1]} ${orderSign} ${arr[j]}ㅤ||ㅤ[${j - 1}] ${orderSign} [${j}]`
           }
         });
 
@@ -49,7 +49,7 @@ export function getInsertionSortSteps(array: number[], order: OrderKey): SortSte
           indices: [j - 1, j],
           message: {
             title: "NO SWAP NEEDED",
-            description: `Comparing ${arr[j - 1]} with ${arr[j]}`
+            description: `||ㅤ${arr[j - 1]} and ${arr[j]}ㅤ||ㅤAlready in correct position`
           }
         });
         steps.push({ type: 'compare', indices: [j - 1, j] });

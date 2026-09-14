@@ -6,7 +6,7 @@ export function getSelectionSortSteps(array: number[], order: OrderKey): SortSte
     return isAscending ? a < b : a > b;
   };
 
-  const orderText = isAscending ? "minimun" : "maximum";
+  const orderText = isAscending ? "minimum" : "maximum";
   const orderSign = isAscending ? ">" : "<"
 
   const steps: SortStep[] = [];
@@ -18,7 +18,7 @@ export function getSelectionSortSteps(array: number[], order: OrderKey): SortSte
       indices: [i],
       message: {
         title: "SELECTION INIT",
-        description: `Pass ${i + 1}: Searching for the ${orderText} element from index ${i} onward`
+        description: `Searching for the ${orderText} elementㅤ||ㅤfrom [${i}] onward`
       }
     });
 
@@ -30,7 +30,7 @@ export function getSelectionSortSteps(array: number[], order: OrderKey): SortSte
         indices: [targetIndex, j],
         message: {
           title: "COMPARING",
-          description: `Checking if ${arr[j]} (index ${j}) ${orderSign} ${arr[targetIndex]} (index ${targetIndex})`
+          description: `Checking against current ${orderText}ㅤ||ㅤ${arr[j]} ${orderSign} ${arr[targetIndex]}ㅤ||ㅤ[${j}] ${orderSign} [${targetIndex}]`
         }
       });
 
@@ -44,7 +44,7 @@ export function getSelectionSortSteps(array: number[], order: OrderKey): SortSte
           indices: [targetIndex],
           message: {
             title: `NEW ${isAscending ? "MINIMUM" : "MAXIMUM"} FOUND`,
-            description: `New ${orderText}: ${arr[targetIndex]} at index ${targetIndex}`
+            description: `New ${orderText} foundㅤ||ㅤ${arr[targetIndex]}ㅤ||ㅤ[${targetIndex}]`
           }
         });
       }
@@ -56,7 +56,7 @@ export function getSelectionSortSteps(array: number[], order: OrderKey): SortSte
         indices: [i, targetIndex],
         message: {
           title: "SWAPPING",
-          description: `Swapping ${arr[i]} (index ${i}) with ${arr[targetIndex]} (index ${targetIndex})`
+          description: `Placing ${orderText} in its correct positionㅤ||ㅤ${arr[i]}, ${arr[targetIndex]}ㅤ||ㅤ[${i}], [${targetIndex}]`
         }
       });
 
