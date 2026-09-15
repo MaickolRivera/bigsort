@@ -12,6 +12,7 @@ import MoonIcon from "../components/icons/config/IconDarkMode";
 import { Button } from "@/components/ui/button";
 import IconGithub from "@/components/icons/general/IconGithub";
 import SortingList from "@/components/SortingList";
+import { useTranslation } from "react-i18next";
 
 type SettingSidebarProps = {
 
@@ -39,27 +40,22 @@ function SettingSidebar({
     rangeValue,
     setRangeValue,
     randomNumberItems,
-
     codeAlgorithm,
     setCodeAlgorithm,
-
     algSpeed,
     setAlgSpeed,
-
     algOrder,
     setAlgOrder,
-
     theme,
     handleThemeChange,
-
     currentList,
     handleCreateList,
   }: SettingSidebarProps) {
 
-    const [selectedLanguage, setSelectedLanguage] = useState<"EN" | "ES">("EN");
+    const { i18n } = useTranslation();
 
     const toggleLanguage = () => {
-        setSelectedLanguage((prev) => (prev === "EN" ? "ES" : "EN"));
+        i18n.changeLanguage(i18n.language === "en" ? "es" : "en");
     };
 
     const toggleTheme = () => {
@@ -116,7 +112,7 @@ function SettingSidebar({
                             className="flex-1 cursor-pointer"
                             onClick={toggleLanguage}
                         >
-                            {selectedLanguage}
+                            {i18n.language.toUpperCase()}
                         </Button>
 
                         <Button
