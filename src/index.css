@@ -99,7 +99,7 @@ html, body {
   --font-sans: Montserrat, ui-sans-serif, sans-serif, system-ui;
   --font-serif: "Playfair Display", serif;
   --font-mono: "JetBrains Mono", monospace;
-  --radius: 0.6rem;
+  --radius: 0.5rem;
   --shadow-x: 0px;
   --shadow-y: 6px;
   --shadow-blur: 15px;

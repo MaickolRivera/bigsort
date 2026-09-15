@@ -9,21 +9,19 @@ type SidebarProps = {
   children?: React.ReactNode;
 };
 
-const sideConfig: Record<Side, { sizeSidebar: string; position: string; rounded: string }> = {
+const sideConfig: Record<Side, { sizeSidebar: string; position: string}> = {
   left: {
     sizeSidebar: "w-screen lg:w-80 z-20",
     position: "left-0 lg:left-2",
-    rounded: "rounded-br-2xl lg:rounded-2xl",
   },
   right: {
     sizeSidebar: "w-screen lg:w-90",
     position: "right-0 lg:right-2",
-    rounded: "rounded-bl-2xl lg:rounded-2xl",
   },
 };
 
 export default function Sidebar({ title, icon: Icon, children, side }: SidebarProps) {
-  const { sizeSidebar, position, rounded } = sideConfig[side];
+  const { sizeSidebar, position } = sideConfig[side];
   const [isOpen, setIsOpen] = useState(() => window.innerWidth >= 1024);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
@@ -31,8 +29,8 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
   return (
     <aside
       className={`
-        ${position} ${rounded}
-        border border-sidebar-border bg-sidebar text-sidebar-foreground transition-all duration-300
+        ${position}
+        border border-sidebar-border rounded-md bg-sidebar text-sidebar-foreground transition-all duration-300
         flex flex-col fixed z-10 
         
         top-0 bottom-0 
@@ -52,7 +50,7 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
         `}
         onClick={toggleSidebar}
       >
-        <Icon className="flex-shrink-0" />
+        <Icon className="shrink-0" />
         <h2
           className={`
             font-bold text-xl transition-all duration-300 overflow-hidden
