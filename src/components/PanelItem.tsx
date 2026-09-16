@@ -8,15 +8,27 @@ type PanelItemProps = {
 };
 
 export function PanelItem({ children, onClick, className = "", title = "" }: PanelItemProps) {
+  const sharedClassName = cn(
+    "px-4 py-1.5 h-full flex justify-center text-muted-foreground border-border items-center rounded-lg border",
+    className
+  );
+
+  if (onClick) {
+    return (
+      <button
+        type="button"
+        title={title}
+        aria-label={title || undefined}
+        onClick={onClick}
+        className={sharedClassName}
+      >
+        {children}
+      </button>
+    );
+  }
+
   return (
-    <div
-      title={title}
-      onClick={onClick}
-      className={cn(
-        "px-4 py-1.5 h-full flex justify-center text-muted-foreground border-border items-center rounded-lg border",
-        className
-      )}
-    >
+    <div title={title} className={sharedClassName}>
       {children}
     </div>
   );

@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem("theme") || "dark";
+          document.documentElement.classList.toggle("dark", theme === "dark");
+        } catch (e) {}
+      })();
+    </script>
+
     <title>Big Sort - Sorting Algorithm Visualizer</title>
-    <link rel="icon" type="image/svg+xml" href="/bigsort.ico" />
+    <link rel="icon" type="image/x-icon" href="/bigsort.ico" />
     <link rel="canonical" href="https://bigsort.vercel.app/" />
 
     <meta name="title" content="Big Sort - Sorting Algorithm Visualizer" />
@@ -15,11 +24,17 @@
     <meta name="author" content="Maickol Rivera" />
     <meta name="robots" content="index, follow">
 
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f0eedf" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bigsort.vercel.app/" />
+    <meta property="og:site_name" content="Big Sort" />
     <meta property="og:title" content="Big Sort - Sorting Algorithm Visualizer" />
     <meta property="og:description" content="Explore how sorting algorithms work with interactive animations and code in multiple languages." />
     <meta property="og:image" content="https://bigsort.vercel.app/bigsort.webp" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="es_ES" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://bigsort.vercel.app/" />
@@ -27,11 +42,35 @@
     <meta name="twitter:description" content="Explore how sorting algorithms work with interactive animations and code in multiple languages." />
     <meta name="twitter:image" content="https://bigsort.vercel.app/bigsort.webp" />
 
+    <link rel="preload" href="/src/assets/fonts/Poppins-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Big Sort",
+        "url": "https://bigsort.vercel.app/",
+        "description": "Visualize sorting algorithms in real time. Control speed, see code in multiple languages and learn visually.",
+        "image": "https://bigsort.vercel.app/bigsort.webp",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Any",
+        "inLanguage": ["en", "es"],
+        "author": {
+          "@type": "Person",
+          "name": "Maickol Rivera"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
     <link href="/src/index.css" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script src="https://tweakcn.com/live-preview.min.js"></script>
   </body>
 </html>
