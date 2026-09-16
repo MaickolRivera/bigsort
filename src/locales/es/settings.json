@@ -17,6 +17,8 @@
     "languaje":"Cambiar idioma",
     "theme":"Cambiar tema",
     "repository":"Visitar repositorio",
-    "sidebar":"Abrr/Cerrar menu lateral"
+    "sidebar":"Abrr/Cerrar menu lateral",
+    "algorithm":"Seleccionar algoritmo de ordenamiento",
+    "range":"Seleccionar la cantidad de elementos"
   }
 }

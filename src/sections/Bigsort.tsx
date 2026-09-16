@@ -42,7 +42,7 @@ function BigSort({
   const translated = translateMessage(t, message);
 
   return (
-    <div className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:pt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
+    <main className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:pt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
 
       <div className="flex gap-4 flex-col justify-center items-center w-full lg:w-130">
         <h1 className="text-2xl lg:text-3xl font-bold">BIG S(O)RT</h1>
@@ -130,7 +130,7 @@ function BigSort({
   </p>
 </footer>
 
-    </div>
+    </main>
   );
 }
 

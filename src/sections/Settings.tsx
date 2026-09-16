@@ -69,6 +69,7 @@ function SettingSidebar({
                         values={['BUBBLE', 'INSERTION', 'SELECTION', 'QUICK']}
                         selectedValue={codeAlgorithm}
                         setSelectedValue={setCodeAlgorithm}
+                        ariaLabel={t("aria-label.algorithm")}
                     />
                 </SidebarSection>
 

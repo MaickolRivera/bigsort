@@ -1,4 +1,5 @@
 import { Slider } from "@/components/ui/slider"
+import { useTranslation } from "react-i18next"
 
 type RangeProps = {
   value: number
@@ -6,9 +7,11 @@ type RangeProps = {
 }
 
 export default function Range({ value, onChange }: RangeProps) {
+  const { t } = useTranslation("settings");
+
   return (
     <Slider
-      aria-label="Select the number of elements"
+      aria-label={t("aria-label.range")}
       min={5}
       max={15}
       step={1}
