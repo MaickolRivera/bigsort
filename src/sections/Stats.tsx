@@ -1,4 +1,4 @@
-import { StatItem } from "../components/Item";
+import { StatItem } from "../components/PanelItem";
 
 type StatsProps = {
     bestCase: string;

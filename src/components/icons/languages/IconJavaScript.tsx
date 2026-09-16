@@ -1,9 +1,9 @@
-type IconJSProps = {
+type IconJavaScriptProps = {
     size?: number;
     className?: string;
 };
 
-export default function IconJS({ size = 18, className = "" }: IconJSProps) {
+export default function IconJavaScript({ size = 18, className = "" }: IconJavaScriptProps) {
     return (
         <svg
             width={size}

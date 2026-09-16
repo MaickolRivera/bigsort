@@ -7,7 +7,7 @@ import SidebarSection from "../components/SidebarSection";
 import ButtonRandom from "../components/ButtonRandom";
 import type { AlgorithmKey, OrderKey, SpeedKey } from "../types";
 import { useTranslation } from "react-i18next";
-import SunIcon from "../components/icons/config/IconWhiteMode";
+import SunIcon from "../components/icons/config/IconLightMode";
 import MoonIcon from "../components/icons/config/IconDarkMode";
 import { Button } from "@/components/ui/button";
 import IconGithub from "@/components/icons/general/IconGithub";

@@ -1,9 +1,9 @@
-type IconWhiteModeProps = {
+type IconLightModeProps = {
     size?: number;
     className?: string;
 }
 
-export default function IconWhiteMode({size = 16, className=""}: IconWhiteModeProps){
+export default function IconLightMode({size = 16, className=""}: IconLightModeProps){
     return(
         <svg 
         width={size} 

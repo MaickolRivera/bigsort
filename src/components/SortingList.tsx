@@ -1,4 +1,4 @@
-import PanelItem from "./Item";
+import PanelItem from "./PanelItem";
 import ButtonRandom from "./ButtonRandom";
 
 type SortingListProps = {

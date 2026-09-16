@@ -1,7 +1,7 @@
 import IconPause from "../components/icons/controls/IconPause"
 import IconRetry from "../components/icons/controls/IconRetry"
 import IconRun from "../components/icons/controls/IconRun"
-import PanelItem from "../components/Item"
+import PanelItem from "../components/PanelItem"
 
 import { useTranslation } from "react-i18next";
 

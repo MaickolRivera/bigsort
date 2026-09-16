@@ -2,12 +2,12 @@ import CodeField from "../components/CodeField";
 import Sidebar from "../components/Sidebar";
 import SidebarSection from "../components/SidebarSection";
 import IconOverview from "../components/icons/general/IconOverview";
-import IconJS from "../components/icons/languajes/IconJS";
-import IconJava from "../components/icons/languajes/IconJava";
-import IconPython from "../components/icons/languajes/IconPython";
+import IconJavaScript from "../components/icons/languages/IconJavaScript";
+import IconJava from "../components/icons/languages/IconJava";
+import IconPython from "../components/icons/languages/IconPython";
 import type { AlgorithmKey, LanguageKey } from "../types";
 import SwitchOption from "@/components/SwitchOption";
-import StepsTimeline from "@/components/StepTimeLine";
+import StepsTimeline from "@/components/StepsTimeline";
 import { useTranslation } from "react-i18next";
 
 type OverviewSidebarProps = {
@@ -47,7 +47,7 @@ const description = t(`${key}.description`);
                     <SwitchOption<LanguageKey>
                         selectedValue={codeLanguage}
                         setSelectedValue={setCodeLanguage}
-                        options={[<IconJS />, <IconJava />, <IconPython />]}
+                        options={[<IconJavaScript />, <IconJava />, <IconPython />]}
                         values={['JAVASCRIPT', 'JAVA', 'PYTHON']}
                     />
                     <CodeField codeAlgorithm={codeAlgorithm} codeLanguage={codeLanguage} />
