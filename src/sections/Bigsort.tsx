@@ -4,6 +4,8 @@ import Controls from "./Controls";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getActionBadgeClass } from "../lib/actionColor";
+import { useTranslation } from "react-i18next";
+import { translateMessage } from "@/lib/translateMessage";
 
 type BigSortProps = {
   codeLanguage: LanguageKey;
@@ -36,13 +38,16 @@ function BigSort({
   handleReset,
 }: BigSortProps) {
 
+  const { t } = useTranslation("bigsort");
+  const translated = translateMessage(t, message);
+
   return (
     <div className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:pt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
 
-      <div className="flex gap-4 flex-col justify-center items-center w-full lg:w-[24rem]">
+      <div className="flex gap-4 flex-col justify-center items-center w-full lg:w-130">
         <h1 className="text-2xl lg:text-3xl font-bold">BIG S(O)RT</h1>
         <p className="text-xs text-sidebar-foreground/70 text-center px-8 lg:px-0">
-          Interactive tool to explore how sorting algorithms work, with live visuals, controls, speed and code in multiple languages.
+        {t("information.description")}  
         </p>
       </div>
 
@@ -65,45 +70,41 @@ function BigSort({
         <Controls isAnimating={isAnimating} handleRun={handleRun} handleReset={handleReset}></Controls>
         
         <div className="flex flex-col md:flex-row gap-3 justify-center px-5">
-          <Card className="w-full lg:w-105 overflow-hidden">
+          <Card className="w-full lg:w-130 overflow-hidden">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
                 <Badge className={`uppercase text-[10px] transition-none ${getActionBadgeClass(actionType)}`}>
-                  {message?.title ?? "ready"}
+                  {translated?.title ?? t("algorithms.ready")}
                 </Badge>
               </CardTitle>
             </CardHeader>
             
             <CardContent>
               <p className="text-sm pl-2">
-                {!message?.description ? "Press the run button to begin sorting." : message.description}
+                {!translated?.description ? t("algorithms.beginSorting") : translated.description}
               </p>
             </CardContent>
           </Card>
           
-          <Card className="text-center">
+          <Card className="text-center w-auto lg:w-22">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
-                STEPS
+                {t("information.steps")} 
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xs">
                 {countSteps}
-              </p>
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center w-auto lg:w-22">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
-                SWAPS
+                {t("information.swaps")} 
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-xs">
                 {countSwaps}
-              </p>
             </CardContent>
           </Card>
         </div>
@@ -113,19 +114,21 @@ function BigSort({
       <Stats bestCase={bestCase} worstCase={worstCase}/>
       */}
 
-      <footer className="hidden md:block fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
-        <p className="text-xs text-neutral-500 tracking-wide">
-          Built with <span className="text-neutral-400">♥</span> by{" "}
-          <a 
-            href="https://www.linkedin.com/in/maickol-rivera/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-neutral-400 hover:text-white transition-colors cursor-pointer"
-          >
-            Maickol Rivera
-          </a>
-        </p>
-      </footer>
+<footer className="hidden md:block fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+  <p className="text-xs text-neutral-500 tracking-wide">
+    {t("information.footer")}{" "}
+    <span className="text-neutral-400">♥</span>{" "}
+    {t("information.footerBy")}{" "}
+    <a
+      href="https://www.linkedin.com/in/maickol-rivera/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-neutral-400 hover:text-white transition-colors cursor-pointer"
+    >
+      Maickol Rivera
+    </a>
+  </p>
+</footer>
 
     </div>
   );

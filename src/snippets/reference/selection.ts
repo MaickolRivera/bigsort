@@ -5,22 +5,6 @@ export const SELECTION: AlgorithmData = {
     best: 'O(n²)',
     worst: 'O(n²)'
   },
-
-  info: {
-    description: 
-`Splits the list into a sorted and an unsorted part. 
-On each pass, it finds the smallest element in the unsorted part and moves it to the end of the sorted part.
-
-It's easy to understand, though not the most efficient choice for large lists.`,
-    
-    explanation: `
-Find the smallest element in the unsorted part
-Swap it with the first element of that part
-Treat that position as sorted
-Repeat with the rest of the list
-Continue until only one element remains to check`
-  },
-
   code: {
     JAVA: `
       public class SelectionSort {

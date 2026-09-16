@@ -36,7 +36,7 @@ export default function SwitchOption<T extends string>({
           <ToggleGroupItem
             key={value}
             value={value}
-            aria-label={`Switch to ${value}`}
+            aria-label={typeof option === "string" ? option : String(value)}
             className="w-full cursor-pointer"
           >
             {option}

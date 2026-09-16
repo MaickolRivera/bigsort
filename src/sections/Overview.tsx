@@ -7,8 +7,8 @@ import IconJava from "../components/icons/languajes/IconJava";
 import IconPython from "../components/icons/languajes/IconPython";
 import type { AlgorithmKey, LanguageKey } from "../types";
 import SwitchOption from "@/components/SwitchOption";
-import { snippets } from "@/snippets/reference";
 import StepsTimeline from "@/components/StepTimeLine";
+import { useTranslation } from "react-i18next";
 
 type OverviewSidebarProps = {
     codeLanguage: LanguageKey,
@@ -21,8 +21,11 @@ function OverviewSidebar({
     codeLanguage, setCodeLanguage,
     codeAlgorithm}: OverviewSidebarProps) {
 
-    const description = snippets[codeAlgorithm].info.description;
-    const explanation = snippets[codeAlgorithm].info.explanation;
+    const { t } = useTranslation("overview");
+    const key = codeAlgorithm.toLocaleLowerCase();
+
+const description = t(`${key}.description`);
+    const explanation = t(`${key}.explanation`, {returnObjects: true}) as string[];
 
     return (
         <Sidebar title="OVERVIEW" icon={IconOverview} side="right"> 

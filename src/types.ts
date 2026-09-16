@@ -3,9 +3,10 @@ export type AlgorithmKey = "BUBBLE" | "INSERTION" | "SELECTION" | "QUICK";
 export type SpeedKey = "0.5x" | "1.0x" | "1.5x" | "2.0x";
 
 export type MessageKey = {
-  title: string;
-  description: string;
-}
+  titleKey: string;
+  descriptionKey: string;
+  params?: Record<string, string | number>;
+};
 
 export type InfoKey = {
   description: string;
@@ -29,7 +30,6 @@ export type AnimationState = "IDLE" | "RUNNING" | "PAUSED" | "COMPLETED";
 
 export type AlgorithmData = {
   complexity: ComplexityKey;
-  info: InfoKey;
   code: Record<LanguageKey, string>;
 };
 

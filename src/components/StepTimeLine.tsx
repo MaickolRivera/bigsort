@@ -1,8 +1,5 @@
-export default function StepsTimeline({ explanation }: { explanation: string }) {
-  const steps = explanation
-    .split('\n')
-    .map(line => line.replace(/^\d+\.\s*/, '').trim())
-    .filter(Boolean);
+export default function StepsTimeline({ explanation }: { explanation: string[] }) {
+  const steps = explanation.filter(Boolean);
 
   return (
     <ol className="flex flex-col">

@@ -5,22 +5,6 @@ export const INSERTION: AlgorithmData = {
     best: 'O(n)',
     worst: 'O(n²)'
   },
-
-  info: {
-    description: 
-`Builds the sorted list one element at a time. 
-It takes each element and inserts it into its correct position within the already-sorted part of the list.
-
-It's efficient for small or nearly sorted lists, similar to how a person sorts playing cards by hand.`,
-    
-    explanation: `
-Take the next unsorted element
-Compare it with the elements already sorted to its left
-Shift larger elements one position to the right
-Insert the element into its correct position
-Repeat until the entire list is sorted`
-  },
-
   code: {
     JAVA: `
 public class InsertionSort {

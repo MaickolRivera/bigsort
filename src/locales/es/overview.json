@@ -1,0 +1,41 @@
+{
+  "bubble": {
+    "description": "Un algoritmo de ordenamiento simple basado en comparaciones.\nRecorre repetidamente la lista, compara elementos adyacentes, y los intercambia si están en el orden equivocado.\n\nRecibe su nombre porque los elementos más pequeños \"burbujean\" hacia el inicio de la lista con cada pasada.",
+    "explanation": [
+      "Comparar cada par de elementos adyacentes",
+      "Intercambiarlos si el elemento de la izquierda es mayor",
+      "Después de cada pasada, el elemento más grande sin ordenar se asienta en su posición final",
+      "Repetir hasta que no se necesiten más intercambios"
+    ]
+  },
+  "insertion": {
+    "description": "Construye la lista ordenada un elemento a la vez.\nToma cada elemento y lo inserta en su posición correcta dentro de la parte ya ordenada de la lista.\n\nEs eficiente para listas pequeñas o casi ordenadas, similar a cómo una persona ordena cartas de juego con la mano.",
+    "explanation": [
+      "Tomar el siguiente elemento sin ordenar",
+      "Compararlo con los elementos ya ordenados a su izquierda",
+      "Desplazar los elementos mayores una posición a la derecha",
+      "Insertar el elemento en su posición correcta",
+      "Repetir hasta que toda la lista esté ordenada"
+    ]
+  },
+  "selection": {
+    "description": "Divide la lista en una parte ordenada y otra sin ordenar.\nEn cada pasada, encuentra el elemento más pequeño de la parte sin ordenar y lo mueve al final de la parte ordenada.\n\nEs fácil de entender, aunque no es la opción más eficiente para listas grandes.",
+    "explanation": [
+      "Encontrar el elemento más pequeño en la parte sin ordenar",
+      "Intercambiarlo con el primer elemento de esa parte",
+      "Tratar esa posición como ordenada",
+      "Repetir con el resto de la lista",
+      "Continuar hasta que quede un solo elemento por revisar"
+    ]
+  },
+  "quick": {
+    "description": "Un algoritmo de tipo divide y vencerás.\nElige un elemento como pivote y particiona la lista de modo que los elementos más pequeños queden a su izquierda y los más grandes a su derecha.\n\nLuego aplica el mismo proceso de forma recursiva a cada mitad hasta que toda la lista quede ordenada.",
+    "explanation": [
+      "Elegir un elemento como pivote (aquí, el último del rango)",
+      "Particionar la lista: los elementos menores que el pivote van a la izquierda, los mayores a la derecha",
+      "Colocar el pivote en su posición final (particionamiento)",
+      "Aplicar el mismo proceso recursivamente a la sublista izquierda",
+      "Aplicar el mismo proceso recursivamente a la sublista derecha"
+    ]
+  }
+}
