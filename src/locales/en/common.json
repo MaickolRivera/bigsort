@@ -2,8 +2,5 @@
   "controls": {
     "run": "Run / Pause Animation",
     "reset": "Reset Animation"
-  },
-  "buttons": {
-    "random": "Generate random numbers"
   }
 }

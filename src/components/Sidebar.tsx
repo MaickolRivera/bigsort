@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 type Side = "left" | "right";
 
@@ -25,6 +26,7 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
   const [isOpen, setIsOpen] = useState(() => window.innerWidth >= 1024);
 
   const toggleSidebar = () => setIsOpen(!isOpen);
+  const { t } = useTranslation("settings");
 
   return (
     <aside
@@ -43,12 +45,14 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
         }
       `}
     >
-      <div
+      <button
         className={`
           flex items-center cursor-pointer transition-all duration-300
           ${isOpen ? "justify-start gap-5" : "justify-start"}
-        `}
+        `} 
+        aria-label={t("aria-label.sidebar")}
         onClick={toggleSidebar}
+        type="button"
       >
         <Icon className="shrink-0" />
         <h2
@@ -59,7 +63,7 @@ export default function Sidebar({ title, icon: Icon, children, side }: SidebarPr
         >
           {title}
         </h2>
-      </div>
+      </button>
 
       {children && (
         <div

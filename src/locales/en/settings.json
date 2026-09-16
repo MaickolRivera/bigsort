@@ -1,0 +1,22 @@
+{
+  "title": {
+    "settings": "SETTINGS",
+    "algorithms": "ALGORITHMS",
+    "order": "ORDER",
+    "speed": "SPEED",
+    "numbers":"NUMBERS",
+    "values":"VALUES",
+    "config": "CONFIG"
+  },
+  "button": {
+    "ascending": "ASCENDING",
+    "descending": "DESCENDING"
+  },
+  "aria-label": {
+    "random": "Generate random numbers",
+    "languaje":"Change languaje",
+    "theme":"Change theme",
+    "repository":"View repository",
+    "sidebar":"Open/Close sidebar"
+  }
+}

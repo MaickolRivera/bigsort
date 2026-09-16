@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import IconRandom from "./icons/general/IconRandom"
+import { useTranslation } from "react-i18next"
 
 type ButtonRandomProps = {
   onClick?: () => void
@@ -8,9 +9,12 @@ type ButtonRandomProps = {
 }
 
 export default function ButtonRandom({ onClick, className }: ButtonRandomProps) {
+
+  const { t } = useTranslation("settings");
+
   return (
     <Button
-      aria-label="Generate random numbers"
+      aria-label={t("aria-label.random")}
       onClick={onClick}
       variant="outline"
       size="icon"
