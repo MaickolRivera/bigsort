@@ -1,0 +1,41 @@
+{
+  "bubble": {
+    "description": "A simple comparison-based sorting algorithm.\nIt repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.\n\nIt gets its name because smaller elements \"bubble\" toward the top of the list with each pass.",
+    "explanation": [
+      "Compare each pair of adjacent elements",
+      "Swap them if the left element is greater",
+      "After each pass, the largest unsorted element settles into its final position",
+      "Repeat until no more swaps are needed"
+    ]
+  },
+  "insertion": {
+    "description": "Builds the sorted list one element at a time.\nIt takes each element and inserts it into its correct position within the already-sorted part of the list.\n\nIt's efficient for small or nearly sorted lists, similar to how a person sorts playing cards by hand.",
+    "explanation": [
+      "Take the next unsorted element",
+      "Compare it with the elements already sorted to its left",
+      "Shift larger elements one position to the right",
+      "Insert the element into its correct position",
+      "Repeat until the entire list is sorted"
+    ]
+  },
+  "selection": {
+    "description": "Splits the list into a sorted and an unsorted part.\nOn each pass, it finds the smallest element in the unsorted part and moves it to the end of the sorted part.\n\nIt's easy to understand, though not the most efficient choice for large lists.",
+    "explanation": [
+      "Find the smallest element in the unsorted part",
+      "Swap it with the first element of that part",
+      "Treat that position as sorted",
+      "Repeat with the rest of the list",
+      "Continue until only one element remains to check"
+    ]
+  },
+  "quick": {
+    "description": "A divide-and-conquer algorithm.\nIt picks an element as a pivot and partitions the list so that smaller elements end up to its left and larger elements to its right.\n\nIt then applies the same process recursively to each half until the entire list is sorted.",
+    "explanation": [
+      "Pick an element as the pivot (here, the last one in the range)",
+      "Partition the list: elements smaller than the pivot go left, larger ones go right",
+      "Place the pivot in its final position (partitioning)",
+      "Recursively apply the same process to the left sublist",
+      "Recursively apply the same process to the right sublist"
+    ]
+  }
+}

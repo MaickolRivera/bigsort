@@ -29,7 +29,6 @@ export type AnimationState = "IDLE" | "RUNNING" | "PAUSED" | "COMPLETED";
 
 export type AlgorithmData = {
   complexity: ComplexityKey;
-  info: InfoKey;
   code: Record<LanguageKey, string>;
 };
 

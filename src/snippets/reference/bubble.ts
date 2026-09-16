@@ -6,23 +6,8 @@ export const BUBBLE: AlgorithmData = {
     worst: 'O(n²)'
   },
 
-  info: {
-    description: 
-`A simple comparison-based sorting algorithm. 
-It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-
-It gets its name because smaller elements "bubble" toward the top of the list with each pass.`,
-    
-    explanation: `
-Compare each pair of adjacent elements
-Swap them if the left element is greater
-After each pass, the largest unsorted element settles into its final position
-Repeat until no more swaps are needed`
-  },
-
   code: {
-    JAVA: 
-      `
+    JAVA: `
 public class BubbleSort {
   public static void bubbleSort(int[] arr) {
     int n = arr.length;
@@ -42,8 +27,7 @@ public class BubbleSort {
   }
 }`.trim(),
 
-    PYTHON: 
-      `
+    PYTHON: `
 def bubble_sort(arr):
   n = len(arr)
   swapped = True
@@ -54,9 +38,8 @@ def bubble_sort(arr):
               arr[i], arr[i - 1] = arr[i - 1], arr[i]
               swapped = True
       n -= 1`.trim(),
-  
-    JAVASCRIPT: 
-     `
+
+    JAVASCRIPT: `
 function bubbleSort(arr) {
   let n = arr.length;
   let swapped = true;

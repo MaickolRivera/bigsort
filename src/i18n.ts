@@ -8,17 +8,21 @@ import settingsEn from "./locales/en/settings.json";
 import settingsEs from "./locales/es/settings.json";
 import bigsortEn from "./locales/en/bigsort.json";
 import bigsortEs from "./locales/es/bigsort.json";
+import overviewEn from "./locales/en/overview.json";
+import overviewEs from "./locales/es/overview.json";
 
 const resources = {
   en: {
     common: commonEn,
     settings: settingsEn,
     bigsort: bigsortEn,
+    overview: overviewEn
   },
   es: {
     common: commonEs,
     settings: settingsEs,
     bigsort: bigsortEs,
+    overview: overviewEs
   },
 };
 
@@ -29,7 +33,7 @@ i18n
     resources,
     fallbackLng: "en",
     defaultNS: "common",
-    ns: ["common", "settings", "bigsort"],
+    ns: ["common", "settings", "bigsort", "overview"],
 
     detection: {
       order: ["localStorage", "navigator"],
