@@ -7,7 +7,6 @@ import IconJava from "../components/icons/languajes/IconJava";
 import IconPython from "../components/icons/languajes/IconPython";
 import type { AlgorithmKey, LanguageKey } from "../types";
 import SwitchOption from "@/components/SwitchOption";
-import { snippets } from "@/snippets/reference";
 import StepsTimeline from "@/components/StepTimeLine";
 import { useTranslation } from "react-i18next";
 
