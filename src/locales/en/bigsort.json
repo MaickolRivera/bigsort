@@ -1,0 +1,13 @@
+{
+  "information": {
+    "description": "An interactive tool to understand sorting algorithms from the inside out: visualize every comparison and swap in real time, at your own pace, and discover how they're implemented across different languages.",
+    "steps": "STEPS",
+    "swaps": "SWAPS",
+    "footer": "Built with",
+    "footerBy": "by"
+  },
+  "aria-label": {
+    "run": "Run / Pause Animation",
+    "reset": "Reset Animation"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "information": {
+    "description": "Herramienta interactiva para entender los algoritmos de ordenamiento desde adentro: visualiza cada comparación y cada cambio en tiempo real, a tu propio ritmo, y descubre cómo se implementan en diferentes lenguajes.",
+    "steps": "PASOS",
+    "swaps": "CAMBIOS",
+    "footer": "Desarrollado con",
+    "footerBy": "por"
+  },
+  "aria-label": {
+    "run": "Iniciar / Pausar animación",
+    "reset": "Reiniciar animación"
+  }
+}
