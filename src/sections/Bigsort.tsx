@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { getActionBadgeClass } from "../lib/actionColor";
 import { useTranslation } from "react-i18next";
+import { translateMessage } from "@/lib/translateMessage";
 
 type BigSortProps = {
   codeLanguage: LanguageKey;
@@ -38,6 +39,7 @@ function BigSort({
 }: BigSortProps) {
 
   const { t } = useTranslation("bigsort");
+  const translated = translateMessage(t, message);
 
   return (
     <div className="flex flex-col md:px-50 lg:items-center gap-10 pt-14 lg:pt-0 lg:justify-center flex-auto overflow-y-scroll scroll-bar-custom w-full">
@@ -68,18 +70,18 @@ function BigSort({
         <Controls isAnimating={isAnimating} handleRun={handleRun} handleReset={handleReset}></Controls>
         
         <div className="flex flex-col md:flex-row gap-3 justify-center px-5">
-          <Card className="w-full lg:w-105 overflow-hidden">
+          <Card className="w-full lg:w-130 overflow-hidden">
             <CardHeader>
               <CardTitle className="text-xs font-normal text-muted-foreground">
                 <Badge className={`uppercase text-[10px] transition-none ${getActionBadgeClass(actionType)}`}>
-                  {message?.title ?? "ready"}
+                  {translated?.title ?? t("algorithms.ready")}
                 </Badge>
               </CardTitle>
             </CardHeader>
             
             <CardContent>
               <p className="text-sm pl-2">
-                {!message?.description ? "Press the run button to begin sorting." : message.description}
+                {!translated?.description ? t("algorithms.beginSorting") : translated.description}
               </p>
             </CardContent>
           </Card>

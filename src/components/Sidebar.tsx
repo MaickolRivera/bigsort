@@ -12,7 +12,7 @@ type SidebarProps = {
 
 const sideConfig: Record<Side, { sizeSidebar: string; position: string}> = {
   left: {
-    sizeSidebar: "w-screen lg:w-80 z-20",
+    sizeSidebar: "w-screen lg:w-90 z-20",
     position: "left-0 lg:left-2",
   },
   right: {

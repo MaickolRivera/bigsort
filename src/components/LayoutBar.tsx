@@ -17,7 +17,7 @@ export default function LayoutBar({ level = 1, index, isActive, actionType }: La
   const height = calculateHeight(level);
 
   return (
-    <div className="flex flex-col gap-3 items-center w-full lg:w-13">
+    <div className="flex flex-col gap-3 items-center w-full lg:w-14">
       <div
         className={`rounded-md border border-border shrink-0 flex items-end pb-1 pt-6 w-full ${getActionColor(isActive, actionType)}`}
         style={{ height: `${height}px` }}

@@ -9,5 +9,108 @@
   "aria-label": {
     "run": "Iniciar / Pausar animación",
     "reset": "Reiniciar animación"
+  },
+  "algorithms": {
+    "ready": "iniciar",
+    "beginSorting": "Presiona 'Iniciar' para comenzar a ordenar.",
+    "common": {
+      "largest": "mayor",
+      "smaller": "menor",
+      "left": "izquierda",
+      "right": "derecha",
+      "minimum": "mínimo",
+      "maximum": "máximo",
+      "ascending": "ascendente",
+      "descending": "descendente"
+    },
+
+    "bubble": {
+      "init": {
+        "title": "INICIO BURBUJA",
+        "description": "Busca el elemento $t(algorithms.common.{{orderKey}}) de los primeros {{count}} elementos y muévelo al final"
+      },
+      "comparing": {
+        "title": "COMPARANDO",
+        "description": "Comparando par adyacenteㅤ||ㅤ{{a}} {{sign}} {{b}}ㅤ||ㅤ[{{i}}] {{sign}} [{{j}}]"
+      },
+      "swapping": {
+        "title": "INTERCAMBIANDO",
+        "description": "Intercambiando fuera de ordenㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{i}}], [{{j}}]"
+      },
+      "noSwap": {
+        "title": "SIN CAMBIOS",
+        "description": "Ya ordenadoㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{i}}], [{{j}}]"
+      },
+      "complete": {
+        "title": "ORDENAMIENTO COMPLETO",
+        "description": "Arreglo final en orden $t(algorithms.common.{{orderKey}}): [{{array}}]"
+      }
+    },
+
+    "insertion": {
+      "init": {
+        "title": "INICIO INSERCIÓN",
+        "description": "Buscando la posición correcta en la parte ordenadaㅤ||ㅤ{{value}}ㅤ:ㅤ[{{index}}]"
+      },
+      "inserting": {
+        "title": "INSERTANDO",
+        "description": "Desplazando hacia la $t(algorithms.common.{{orderKey}})ㅤ||ㅤ{{a}} {{sign}} {{b}}ㅤ||ㅤ[{{i}}] {{sign}} [{{j}}]"
+      },
+      "noSwap": {
+        "title": "SIN CAMBIOS",
+        "description": "||ㅤ{{a}} y {{b}}ㅤ||ㅤYa en la posición correcta"
+      },
+      "complete": {
+        "title": "ORDENAMIENTO COMPLETO",
+        "description": "Arreglo final en orden $t(algorithms.common.{{orderKey}}): [{{array}}]"
+      }
+    },
+
+    "quick": {
+      "subarray": {
+        "title": "ORDENANDO SUB-ARREGLO",
+        "description": "Usando pivote {{pivot}}ㅤ||ㅤrango [{{start}}..{{end}}]"
+      },
+      "comparing": {
+        "title": "COMPARANDO",
+        "description": "Comparando con el pivoteㅤ||ㅤ{{a}}, {{pivot}}ㅤ||ㅤ[{{j}}], [{{end}}]"
+      },
+      "swapping": {
+        "title": "INTERCAMBIANDO",
+        "description": "Moviendo a la partición $t(algorithms.common.{{orderKey}})ㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{j}}], [{{i}}]"
+      },
+      "placingPivot": {
+        "title": "COLOCANDO PIVOTE",
+        "description": "Colocando el pivote en su posición finalㅤ||ㅤ{{pivot}}ㅤ||ㅤ[{{index}}]"
+      },
+      "complete": {
+        "title": "ORDENAMIENTO COMPLETO",
+        "description": "Arreglo final en orden $t(algorithms.common.{{orderKey}}): [{{array}}]"
+      }
+    },
+    
+    "selection": {
+      "init": {
+        "title": "INICIO SELECCIÓN",
+        "description": "Buscando el elemento $t(algorithms.common.{{orderKey}})ㅤ||ㅤdesde [{{index}}] en adelante"
+      },
+      "comparing": {
+        "title": "COMPARANDO",
+        "description": "Comparando contra el $t(algorithms.common.{{orderKey}}) actualㅤ||ㅤ{{a}} {{sign}} {{b}}ㅤ||ㅤ[{{j}}] {{sign}} [{{i}}]"
+      },
+      "newFound": {
+        "min": { "title": "NUEVO MÍNIMO ENCONTRADO" },
+        "max": { "title": "NUEVO MÁXIMO ENCONTRADO" },
+        "description": "Nuevo $t(algorithms.common.{{orderKey}}) encontradoㅤ||ㅤ{{value}}ㅤ||ㅤ[{{index}}]"
+      },
+      "swapping": {
+        "title": "INTERCAMBIANDO",
+        "description": "Colocando el $t(algorithms.common.{{orderKey}}) en su posición correctaㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{i}}], [{{target}}]"
+      },
+      "complete": {
+        "title": "ORDENAMIENTO COMPLETO",
+        "description": "Arreglo final en orden $t(algorithms.common.{{orderKey}}): [{{array}}]"
+      }
+    }
   }
 }

@@ -9,5 +9,108 @@
   "aria-label": {
     "run": "Run / Pause Animation",
     "reset": "Reset Animation"
+  },
+  "algorithms": {
+    "ready": "start",
+    "beginSorting": "Press 'Start' to begin sorting.",
+    "common": {
+      "largest": "largest",
+      "smaller": "smaller",
+      "left": "left",
+      "right": "right",
+      "minimum": "minimum",
+      "maximum": "maximum",
+      "ascending": "ascending",
+      "descending": "descending"
+    },
+
+    "bubble": {
+      "init": {
+        "title": "BUBBLE INIT",
+        "description": "Find the $t(algorithms.common.{{orderKey}}) of the first {{count}} elements and move it to the end"
+      },
+      "comparing": {
+        "title": "COMPARING",
+        "description": "Checking adjacent pairㅤ||ㅤ{{a}} {{sign}} {{b}}ㅤ||ㅤ[{{i}}] {{sign}} [{{j}}]"
+      },
+      "swapping": {
+        "title": "SWAPPING",
+        "description": "Swapping out of orderㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{i}}], [{{j}}]"
+      },
+      "noSwap": {
+        "title": "NO SWAP NEEDED",
+        "description": "Already sortedㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{i}}], [{{j}}]"
+      },
+      "complete": {
+        "title": "SORTING COMPLETE",
+        "description": "Final array in $t(algorithms.common.{{orderKey}}) order: [{{array}}]"
+      }
+    },
+
+    "insertion": {
+      "init": {
+        "title": "INSERTION INIT",
+        "description": "Searching correct position in the sorted partㅤ||ㅤ{{value}}ㅤ:ㅤ[{{index}}]"
+      },
+      "inserting": {
+        "title": "INSERTING",
+        "description": "Shifting $t(algorithms.common.{{orderKey}})ㅤ||ㅤ{{a}} {{sign}} {{b}}ㅤ||ㅤ[{{i}}] {{sign}} [{{j}}]"
+      },
+      "noSwap": {
+        "title": "NO SWAP NEEDED",
+        "description": "||ㅤ{{a}} and {{b}}ㅤ||ㅤAlready in correct position"
+      },
+      "complete": {
+        "title": "SORTING COMPLETE",
+        "description": "Final array in $t(algorithms.common.{{orderKey}}): [{{array}}]"
+      }
+    },
+
+    "quick": {
+      "subarray": {
+        "title": "SORTING SUB-ARRAY",
+        "description": "Using pivot {{pivot}}ㅤ||ㅤrange [{{start}}..{{end}}]"
+      },
+      "comparing": {
+        "title": "COMPARING",
+        "description": "Comparing with pivotㅤ||ㅤ{{a}}, {{pivot}}ㅤ||ㅤ[{{j}}], [{{end}}]"
+      },
+      "swapping": {
+        "title": "SWAPPING",
+        "description": "Moving to $t(algorithms.common.{{orderKey}}) partitionㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{j}}], [{{i}}]"
+      },
+      "placingPivot": {
+        "title": "PLACING PIVOT",
+        "description": "Placing pivot in final positionㅤ||ㅤ{{pivot}}ㅤ||ㅤ[{{index}}]"
+      },
+      "complete": {
+        "title": "SORTING COMPLETE",
+        "description": "Final array in $t(algorithms.common.{{orderKey}}) order: [{{array}}]"
+      }
+    },
+    
+    "selection": {
+      "init": {
+        "title": "SELECTION INIT",
+        "description": "Searching for the $t(algorithms.common.{{orderKey}}) elementㅤ||ㅤfrom [{{index}}] onward"
+      },
+      "comparing": {
+        "title": "COMPARING",
+        "description": "Checking against current $t(algorithms.common.{{orderKey}})ㅤ||ㅤ{{a}} {{sign}} {{b}}ㅤ||ㅤ[{{j}}] {{sign}} [{{i}}]"
+      },
+      "newFound": {
+        "min": { "title": "NEW MINIMUM FOUND" },
+        "max": { "title": "NEW MAXIMUM FOUND" },
+        "description": "New $t(algorithms.common.{{orderKey}}) foundㅤ||ㅤ{{value}}ㅤ||ㅤ[{{index}}]"
+      },
+      "swapping": {
+        "title": "SWAPPING",
+        "description": "Placing $t(algorithms.common.{{orderKey}}) in its correct positionㅤ||ㅤ{{a}}, {{b}}ㅤ||ㅤ[{{i}}], [{{target}}]"
+      },
+      "complete": {
+        "title": "SORTING COMPLETE",
+        "description": "Final array in $t(algorithms.common.{{orderKey}}) order: [{{array}}]"
+      }
+    }
   }
 }
