@@ -96,7 +96,7 @@ html, body {
   --sidebar-accent-foreground: #d5c8be;
   --sidebar-border: #2c2c2c;
   --sidebar-ring: #d5c8be;
-  --font-sans: Montserrat, ui-sans-serif, sans-serif, system-ui;
+  --font-sans: Poppins, ui-sans-serif, sans-serif, system-ui;
   --font-serif: "Playfair Display", serif;
   --font-mono: "JetBrains Mono", monospace;
   --radius: 0.5rem;
