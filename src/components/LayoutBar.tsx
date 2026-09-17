@@ -22,9 +22,9 @@ export default function LayoutBar({ level = 1, index, isActive, actionType }: La
         className={`rounded-md border border-border shrink-0 flex items-end pb-1 pt-6 w-full ${getActionColor(isActive, actionType)}`}
         style={{ height: `${height}px` }}
       >
-        <p className="text-foreground font-semibold text-xs text-center w-full">{level}</p>
+        <p className="text-muted-foreground font-semibold text-xs text-center w-full">{level}</p>
       </div>
-      <p className="text-muted-foreground text-sm text-center w-full">{index}</p>
+      <p className="text-muted-foreground text-xs text-center w-full">[ {index} ]</p>
     </div>
   );
 }
