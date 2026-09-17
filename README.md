@@ -1,11 +1,11 @@
-# Big Sort
+# BigSort
 
 Interactive web app to **visualize how sorting algorithms work**, with step-by-step animations, live stats, Big O notation, and the algorithm's source code in multiple programming languages.
 
 🌐 **Live demo:** [bigsort.vercel.app](https://bigsort.vercel.app/)
 🌍 **Languages:** English & Español (auto-detected, switchable in-app)
 
-![Big Sort preview](https://bigsort.vercel.app/bigsort.webp)
+![BigSort preview](https://bigsort.vercel.app/bigsort.webp)
 
 ---
 
