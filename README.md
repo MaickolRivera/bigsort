@@ -5,7 +5,7 @@ Interactive web app to **visualize how sorting algorithms work**, with step-by-s
 🌐 **Live demo:** [bigsort.vercel.app](https://bigsort.vercel.app/)
 🌍 **Languages:** English & Español (auto-detected, switchable in-app)
 
-![BigSort preview](https://bigsort.vercel.app/bigsort.webp)
+![BigSort preview](https://bigsort.vercel.app/bigsort-preview.webp)
 
 ---
 
