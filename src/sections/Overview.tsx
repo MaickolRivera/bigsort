@@ -28,22 +28,22 @@ const description = t(`${key}.description`);
     const explanation = t(`${key}.explanation`, {returnObjects: true}) as string[];
 
     return (
-        <Sidebar title="OVERVIEW" icon={IconOverview} side="right"> 
+        <Sidebar title={t("titles.overview")} icon={IconOverview} side="right"> 
             <div className="flex flex-col gap-5 mb-5">
 
-                <SidebarSection title="DESCRIPTION">
+                <SidebarSection title={t("titles.description")}>
                     <p className="text-xs whitespace-pre-line">
                         {description}
                     </p>
                 </SidebarSection>
 
-                <SidebarSection title="EXPLANATION">
+                <SidebarSection title={t("titles.explanation")}>
                     <div className="px-2 pt-2">
                         <StepsTimeline explanation={explanation} />
                     </div>
                 </SidebarSection>
 
-                <SidebarSection title="CODE">
+                <SidebarSection title={t("titles.code")}>
                     <SwitchOption<LanguageKey>
                         selectedValue={codeLanguage}
                         setSelectedValue={setCodeLanguage}

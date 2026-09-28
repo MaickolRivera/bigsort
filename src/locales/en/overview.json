@@ -1,4 +1,10 @@
 {
+  "titles": {
+    "overview": "OVERVIEW",
+    "description": "DESCRIPTION",
+    "explanation": "EXPLANATION",
+    "code": "CODE"
+  },
   "bubble": {
     "description": "A simple comparison-based sorting algorithm.\nIt repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.\n\nIt gets its name because smaller elements \"bubble\" toward the top of the list with each pass.",
     "explanation": [

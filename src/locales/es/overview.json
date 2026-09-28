@@ -1,4 +1,10 @@
 {
+  "titles": {
+    "overview": "DETALLES",
+    "description": "DESCRIPCIÓN",
+    "explanation": "EXPLICACIÓN",
+    "code": "CODIGO"
+  },
   "bubble": {
     "description": "Un algoritmo de ordenamiento simple basado en comparaciones.\nRecorre repetidamente la lista, compara elementos adyacentes, y los intercambia si están en el orden equivocado.\n\nRecibe su nombre porque los elementos más pequeños \"burbujean\" hacia el inicio de la lista con cada pasada.",
     "explanation": [
