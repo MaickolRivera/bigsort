@@ -1,15 +1,35 @@
+<div align="center">
+
 # BigSort
 
 Interactive web app to **visualize how sorting algorithms work**, with step-by-step animations, live stats, Big O notation, and the algorithm's source code in multiple programming languages.
 
-🌐 **Live demo:** [bigsort.vercel.app](https://bigsort.vercel.app/)
-🌍 **Languages:** English & Español (auto-detected, switchable in-app)
+[**Live demo**](https://bigsort.vercel.app)
 
-![BigSort preview](https://bigsort.vercel.app/bigsort-preview.webp)
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix_UI-161618?logo=radixui&logoColor=white)
+![i18next](https://img.shields.io/badge/i18next-26A69A?logo=i18next&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?logo=vercel&logoColor=white)
+
+<img src="public/bigsort-preview.webp" alt="BigSort preview" width="800">
+
+</div>
 
 ---
 
-## ✨ Features
+## Table of Contents
+
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Internationalization](#internationalization)
+- [Contributing](#contributing)
+
+## Features
 
 - **Interactive visualization** of Bubble Sort, Insertion Sort, Selection Sort, and Quick Sort.
 - **Step-by-step animation controls**: play/pause, speed (0.5x–2.0x), and manual step navigation.
@@ -19,7 +39,7 @@ Interactive web app to **visualize how sorting algorithms work**, with step-by-s
 - **i18n support**: fully translated UI in English and Spanish.
 - Modern, responsive UI built with Tailwind CSS and Radix primitives.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vite.dev/) as build tool
@@ -28,7 +48,7 @@ Interactive web app to **visualize how sorting algorithms work**, with step-by-s
 - [i18next](https://www.i18next.com/) / [react-i18next](https://react.i18next.com/) for internationalization
 - Package manager: [pnpm](https://pnpm.io/)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Installation
 
@@ -47,7 +67,7 @@ pnpm preview   # Preview the production build locally
 pnpm lint      # Run ESLint
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -61,11 +81,11 @@ src/
 └── types.ts         # Shared TypeScript types
 ```
 
-## 🌍 Internationalization
+## Internationalization
 
 The app ships with full translations for **English** and **Spanish**, detected automatically from the browser and persisted in `localStorage`. Translations live under `src/locales/{en,es}` and are organized by namespace (`bigsort`, `overview`, `settings`).
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! If you'd like to add new algorithms, languages, or features, feel free to open an issue or submit a pull request.
 
