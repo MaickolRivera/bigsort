@@ -46,7 +46,7 @@ function BigSort({
     gap-10 pt-14
     flex flex-col flex-auto 
     md:px-40 
-    lg:items-center lg:pt-20 ">
+    lg:items-center lg:justify-center-safe lg:py-12 ">
 
       <div className="flex gap-4 flex-col justify-center items-center w-full lg:w-130">
         <h1 className="text-2xl lg:text-3xl font-bold">BIG S(O)RT</h1>
